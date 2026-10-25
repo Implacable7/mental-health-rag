@@ -1,0 +1,184 @@
+{
+  "corpus_id": "mental_health_zh_v1",
+  "purpose": "心理健康科普 RAG 学习与面试演示",
+  "language": "zh-CN",
+  "selection_policy": "仅收录 WHO、中国政府网和国家卫生健康委正式公开资料；优先公众科普和公共服务信息，不纳入诊断量表、处方指南、自媒体或商业内容。",
+  "sources": [
+    {
+      "source_id": "who_mental_health",
+      "title": "精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "心理健康基础",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-strengthening-our-response",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["重要事实", "精神卫生促进和预防", "世卫组织的反应"]
+    },
+    {
+      "source_id": "who_mental_disorders",
+      "title": "精神障碍",
+      "publisher": "世界卫生组织",
+      "topic": "精神障碍概览",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-disorders",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["焦虑症", "创伤后应激障碍", "卫生系统与社会支持"]
+    },
+    {
+      "source_id": "who_stress",
+      "title": "压力",
+      "publisher": "世界卫生组织",
+      "topic": "压力与自我照护",
+      "source_type": "html",
+      "extractor": "who_qa",
+      "url": "https://www.who.int/zh/news-room/questions-and-answers/item/stress",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["何为压力？", "如何管理压力？", "限制关注新闻的时间"]
+    },
+    {
+      "source_id": "who_depression",
+      "title": "抑郁障碍",
+      "publisher": "世界卫生组织",
+      "topic": "抑郁",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/depression",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["概述", "症状和类型", "诊断和治疗"]
+    },
+    {
+      "source_id": "who_anxiety",
+      "title": "焦虑症",
+      "publisher": "世界卫生组织",
+      "topic": "焦虑",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/anxiety-disorders/",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["症状和模式", "成因和预防", "诊断和治疗"]
+    },
+    {
+      "source_id": "who_bipolar",
+      "title": "双相情感障碍",
+      "publisher": "世界卫生组织",
+      "topic": "双相情感障碍",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/bipolar-disorder",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["症状和类型", "风险和保护因素", "治疗和护理"]
+    },
+    {
+      "source_id": "who_schizophrenia",
+      "title": "精神分裂症",
+      "publisher": "世界卫生组织",
+      "topic": "精神分裂症",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/schizophrenia",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["症状", "管理和支助", "世卫组织的应对"]
+    },
+    {
+      "source_id": "who_adolescent_mental_health",
+      "title": "青少年精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "儿童青少年",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-mental-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["精神卫生决定因素", "自杀和自残", "早期发现和治疗"]
+    },
+    {
+      "source_id": "who_older_adults",
+      "title": "老年人精神健康",
+      "publisher": "世界卫生组织",
+      "topic": "老年人",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-of-older-adults",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["危险因素", "促进和预防", "治疗和护理"]
+    },
+    {
+      "source_id": "who_mental_health_at_work",
+      "title": "工作场所精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "工作场所",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-at-work",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["工作场所精神卫生风险", "支持有精神卫生问题的劳动者", "世卫组织的应对"]
+    },
+    {
+      "source_id": "who_suicide",
+      "title": "自杀",
+      "publisher": "世界卫生组织",
+      "topic": "自杀预防与危机识别",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/suicide",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["风险人群", "预防与控制", "耻辱和禁忌"]
+    },
+    {
+      "source_id": "who_suicide_qa",
+      "title": "关于自杀的问答",
+      "publisher": "世界卫生组织",
+      "topic": "危机识别与求助",
+      "source_type": "html",
+      "extractor": "who_qa",
+      "url": "https://www.who.int/zh/news-room/questions-and-answers/item/suicide",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["每年有多少人死于自杀？", "当真只有有精神健康问题的人才会有自杀倾向吗？", "如果认为某人面临迫切危险，不要让他独处。"]
+    },
+    {
+      "source_id": "who_dementia",
+      "title": "痴呆症",
+      "publisher": "世界卫生组织",
+      "topic": "认知健康与照护",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/dementia",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["体征和症状", "治疗和护理", "风险因素和预防措施"]
+    },
+    {
+      "source_id": "who_alcohol",
+      "title": "酒精",
+      "publisher": "世界卫生组织",
+      "topic": "物质使用与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/alcohol/",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["概述", "影响酒精消费及酒精相关伤害的因素", "世卫组织的应对"]
+    },
+    {
+      "source_id": "gov_mental_health_service_2025_2027",
+      "title": "儿科和精神卫生服务年行动方案 2025至2027年",
+      "publisher": "中国政府网转载国家卫生健康委等部门",
+      "topic": "中国心理健康服务与就医支持",
+      "source_type": "html",
+      "extractor": "gov_article",
+      "url": "https://app.www.gov.cn/govdata/gov/202504/28/527934/article.html",
+      "license_note": "中国政府网公开政策文件；本项目保留发布机关和原始 URL，仅用于学习和研究。",
+      "required_phrases": ["一、工作目标", "（二）心理健康和精神卫生服务重点任务。", "四、组织实施"]
+    },
+    {
+      "source_id": "gov_12356_hotline",
+      "title": "国家卫生健康委关于应用12356全国统一心理援助热线电话号码的通知",
+      "publisher": "中国政府网转载国家卫生健康委",
+      "topic": "12356心理援助热线",
+      "source_type": "html",
+      "extractor": "gov_trs",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm",
+      "license_note": "中国政府网公开政策文件；本项目保留发布机关和原始 URL，仅用于学习和研究。",
+      "required_phrases": ["12356", "每日提供不少于18小时心理援助服务", "积极推进心理援助与110、119、120等服务热线"]
+    }
+  ]
+}

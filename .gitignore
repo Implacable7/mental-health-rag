@@ -3,12 +3,14 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+.docx_qa_*/
 
 # Local environments and secrets
 .venv/
 .env
 
 # Runtime artifacts
+data/raw/
 data/processed/
 artifacts/
 indexes/

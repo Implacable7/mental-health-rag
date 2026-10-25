@@ -9,6 +9,7 @@
 - [x] 实现单个 UTF-8 TXT 文档读取与基础元数据生成
 - [x] 实现保守、可重复的单文档文本清洗
 - [x] 实现清洗后正文的确定性文档去重与审计记录
+- [x] 建立并真实抓取权威心理健康中文语料库 v1
 - [ ] 实现文本分块与片段元数据
 - [ ] 建立 Embedding 与 FAISS 索引
 - [ ] 实现检索、生成、引用与拒答
@@ -41,6 +42,30 @@ ruff check .
 ## 当前模块：确定性文档去重
 
 `deduplicate_documents(documents)` 按清洗后正文的 SHA-256 保留第一次出现的文档，并返回稳定顺序的唯一文档和逐条重复审计记录。函数会重新计算哈希以识别过期元数据，不执行可能误删不同结论的语义去重。
+
+## 当前模块：权威语料库 v1
+
+`data/sources/corpus_v1.json` 是冻结的来源清单。当前 16 篇资料全部来自世界卫生组织或中国政府网转载的国家卫生健康委文件，覆盖心理健康基础、压力、抑郁、焦虑、双相情感障碍、精神分裂症、儿童青少年、老年人、工作场所、认知健康、酒精相关风险、自杀预防、危机识别和 12356 心理援助热线。
+
+构建过程只抽取指定正文容器，不进行摘要或同义改写；每篇资料必须通过至少 3 个按正文顺序设置的人工核验短语。原始文件使用 SHA-256 留痕，清洗后执行精确去重。完整原文不提交到公开 Git 仓库，来源清单和审计报告可以提交。
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m mental_health_rag.corpus
+```
+
+如需重新访问官方来源并刷新原始缓存：
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m mental_health_rag.corpus --refresh
+```
+
+输出：
+
+- `data/raw/corpus_v1/`：原始网页缓存，仅供本机审计，已被 Git 忽略。
+- `data/processed/corpus_v1.jsonl`：清洗后的 LangChain `Document` 序列，已被 Git 忽略。
+- `data/reports/corpus_v1_report.json`：来源哈希、字符数、主题分布和语义核验结果。
 
 ## 安全边界
 
