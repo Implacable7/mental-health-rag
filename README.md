@@ -10,7 +10,8 @@
 - [x] 实现保守、可重复的单文档文本清洗
 - [x] 实现清洗后正文的确定性文档去重与审计记录
 - [x] 建立并真实抓取权威心理健康中文语料库 v1
-- [ ] 实现文本分块与片段元数据
+- [x] 实现单篇及批量文档的确定性中文分块与片段元数据
+- [ ] 实现分块结果 JSONL 落盘与可复现构建命令
 - [ ] 建立 Embedding 与 FAISS 索引
 - [ ] 实现检索、生成、引用与拒答
 - [ ] 建立评估集和 Streamlit 演示
@@ -66,6 +67,33 @@ python -m mental_health_rag.corpus --refresh
 - `data/raw/corpus_v1/`：原始网页缓存，仅供本机审计，已被 Git 忽略。
 - `data/processed/corpus_v1.jsonl`：清洗后的 LangChain `Document` 序列，已被 Git 忽略。
 - `data/reports/corpus_v1_report.json`：来源哈希、字符数、主题分布和语义核验结果。
+
+## 当前模块：中文文本分块
+
+`split_document(document, config)` 使用 LangChain 的
+`RecursiveCharacterTextSplitter`（递归字符文本分割器），优先沿换行和中文句末标点切分，
+必要时逐级回退到更细边界。正文只从清洗后原文中截取，不执行摘要或同义改写。
+
+`split_documents(documents, config)` 对一批文档应用同一配置，保持文档顺序和片段顺序，
+返回全部片段以及逐文档统计。批处理中若发现重复 `document_id` 会立即失败，避免不同文档
+产生含义不清或重复的片段身份；错误信息保留输入位置，便于定位坏数据。
+
+首版基线参数是 `chunk_size=500`、`chunk_overlap=80`，长度单位为 Python 字符数。
+每个片段继承来源元数据，并新增 `chunk_id`、`parent_document_id`、`chunk_index`、
+`chunk_count`、`start_index`、`end_index`、内容哈希和分块配置等字段。
+
+```powershell
+conda activate mental-health-rag
+pytest tests/test_chunking.py -q
+```
+
+在当前 16 篇真实语料上的只读回归产生 109 个片段：最短 127 字、中位数 452 字、
+平均 421.11 字、最长 498 字；超出 500 字的片段为 0，109 个片段 ID 均唯一，
+且全部可以按起止位置精确回指清洗正文。这些是当前语料与基线参数下的真实结果，
+不代表参数已经最优；检索效果仍需在后续评估集上验证。
+
+批量接口对同一语料再次得到 16 篇输入和 109 个片段，每篇产生 3 至 13 个片段，
+中位数为 7；文档顺序保持不变，所有片段 ID 仍然唯一。
 
 ## 安全边界
 

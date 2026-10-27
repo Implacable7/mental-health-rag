@@ -1,0 +1,44 @@
+{
+  "experiment": "chunking_v1_baseline",
+  "run_date": "2026-10-25",
+  "corpus": "data/processed/corpus_v1.jsonl",
+  "status": "baseline_not_optimized",
+  "configuration": {
+    "splitter": "RecursiveCharacterTextSplitter",
+    "length_function": "len",
+    "chunk_size": 500,
+    "chunk_overlap": 80,
+    "keep_separator": "end",
+    "separators": [
+      "\n",
+      "。",
+      "！",
+      "？",
+      "；",
+      "，",
+      " ",
+      ""
+    ]
+  },
+  "results": {
+    "document_count": 16,
+    "chunk_count": 109,
+    "min_chunk_chars": 127,
+    "median_chunk_chars": 452,
+    "mean_chunk_chars": 421.11,
+    "max_chunk_chars": 498,
+    "chunks_over_limit": 0,
+    "unique_chunk_ids": 109,
+    "all_chunks_traceable_to_source_text": true,
+    "batch": {
+      "run_date": "2026-10-27",
+      "document_summary_count": 16,
+      "min_chunks_per_document": 3,
+      "median_chunks_per_document": 7.0,
+      "max_chunks_per_document": 13,
+      "document_order_preserved": true,
+      "all_chunk_ids_unique": true
+    }
+  },
+  "interpretation": "The baseline passed structural checks. Retrieval quality has not yet been evaluated, so the parameters are not claimed to be optimal."
+}
