@@ -11,7 +11,7 @@
 - [x] 实现清洗后正文的确定性文档去重与审计记录
 - [x] 建立并真实抓取权威心理健康中文语料库 v1
 - [x] 实现单篇及批量文档的确定性中文分块与片段元数据
-- [ ] 实现分块结果 JSONL 落盘与可复现构建命令
+- [x] 实现分块结果 JSONL 落盘与可复现构建命令
 - [ ] 建立 Embedding 与 FAISS 索引
 - [ ] 实现检索、生成、引用与拒答
 - [ ] 建立评估集和 Streamlit 演示
@@ -94,6 +94,30 @@ pytest tests/test_chunking.py -q
 
 批量接口对同一语料再次得到 16 篇输入和 109 个片段，每篇产生 3 至 13 个片段，
 中位数为 7；文档顺序保持不变，所有片段 ID 仍然唯一。
+
+使用下面的命令可以从冻结的清洗语料重新生成分块文件：
+
+```powershell
+conda activate mental-health-rag
+$env:PYTHONPATH = "src"
+python -m mental_health_rag.chunking `
+  --input data/processed/corpus_v1.jsonl `
+  --output data/processed/chunks_v1.jsonl `
+  --report data/reports/chunks_v1_build.json `
+  --chunk-size 500 `
+  --chunk-overlap 80
+```
+
+构建输出：
+
+- `data/processed/chunks_v1.jsonl`：每行一个分块后的 LangChain `Document`，包含正文和完整片段元数据；该文件包含来源全文片段，已被 Git 忽略。
+- `data/reports/chunks_v1_build.json`：输入和输出哈希、稳定 `build_id`、分块配置、文档级片段数和真实构建统计，可以提交 Git。
+
+同一输入和配置连续构建两次时，片段文件 SHA-256 均为
+`562a5ad8842a5be6d330f0799220f5b25bb32a7cbc7c5da8ffccb0bed87c6b2e`，
+`build_id` 均为
+`41895cb97e2e21664597e1b0cce7f1116f975477331416879acb547d939a7f53`。
+报告中的生成时间允许变化，因此不把整份报告的字节完全相同当作可复现条件。
 
 ## 安全边界
 

@@ -1,0 +1,118 @@
+{
+  "build_id": "41895cb97e2e21664597e1b0cce7f1116f975477331416879acb547d939a7f53",
+  "configuration": {
+    "chunk_overlap": 80,
+    "chunk_size": 500,
+    "chunking_method": "recursive_character",
+    "chunking_version": "1",
+    "keep_separator": "end",
+    "length_function": "len",
+    "separators": [
+      "\n",
+      "。",
+      "！",
+      "？",
+      "；",
+      "，",
+      " ",
+      ""
+    ]
+  },
+  "documents": [
+    {
+      "chunk_count": 5,
+      "document_id": "ab349d8d8d299d9a6792f80778198ea5ff051f1128aea40bf94a26da65f32e70",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "105f5dc2e446c73d9e4fc336e76f6a32191f7e4c4aea9ac6a1cf0baeb4928ab7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-disorders"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "327c69faa0cb5c8f122d03d1d0fa7f8f5fe5faea898281b032ac143bbe686022",
+      "source": "https://www.who.int/zh/news-room/questions-and-answers/item/stress"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "4f7ea12d388a2e23bbc6817c721a8986d7f1f46101660f0953a95de67f00f437",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/depression"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "a652139f85e2f7e27f32ee1c72fa730dbaad8b29762c7366ebdc583cf92842db",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/anxiety-disorders/"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "e128cc174c9300d8c5d17dfe4d5c4cbaf9350af6dbdb42e625937499853916dd",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/bipolar-disorder"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "87c98b753eeab1454fa5e05081b7b805571d5c3995313deb19d0456e28ec9f98",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/schizophrenia"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "2a7b841fa34f314b7ab6e4e47a60ac15de281ed8c28b05ed3cff984bfc085a28",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-mental-health"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "2b13311fece05b3c3455d8170104ae7b52eb631dcb3bb8de2508d623dfbe1a99",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-of-older-adults"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "b1ff23a1da78dad698bda1a19956b34ce68b3a8d0e0d4adc3c107b47d97c2fed",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-at-work"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "5d3be0f39ed1a7a9436b9b3e92980834c585c4b57a4dc0e9efced81d64f70ce4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/suicide"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "ed415ec30224811f0152edbe1a87a5de874df7a6e5e487764de2430cb5f00f73",
+      "source": "https://www.who.int/zh/news-room/questions-and-answers/item/suicide"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "2992a2fce0fced5a1f0e4a152006ea40db5cb864db6e0a60b9c245c6e7ad19a6",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/dementia"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "f45b7eb402bfb7253561376d1ec7d505e3f72fcbe63493746eb00aae4e3461ae",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/alcohol/"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "b4280c8e84e4dabe27bffe45a03043dd81c34a552cbceba3c03a5e8d02bbf608",
+      "source": "https://app.www.gov.cn/govdata/gov/202504/28/527934/article.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "2a6ff352e68f6b0adfc21d3a886fc48462fde28dc790695fcab21b9bf2b7040c",
+      "source": "https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm"
+    }
+  ],
+  "generated_at_utc": "2026-10-27T02:55:55+00:00",
+  "input_path": "data/processed/corpus_v1.jsonl",
+  "input_sha256": "d3fd1227e97beba38721df49c1ec43bc26389e3e73f28388072cf95ff4ad4cd7",
+  "output_path": "data/processed/chunks_v1.jsonl",
+  "output_sha256": "562a5ad8842a5be6d330f0799220f5b25bb32a7cbc7c5da8ffccb0bed87c6b2e",
+  "results": {
+    "all_chunk_ids_unique": true,
+    "chunk_count": 109,
+    "input_count": 16,
+    "max_chunk_chars": 498,
+    "max_chunks_per_document": 13,
+    "min_chunk_chars": 127,
+    "min_chunks_per_document": 3
+  },
+  "schema_version": "1"
+}
