@@ -6,6 +6,8 @@ import argparse
 import hashlib
 import json
 import re
+import time
+import urllib.error
 import urllib.request
 from collections import Counter
 from dataclasses import asdict, dataclass
@@ -30,6 +32,10 @@ _ALLOWED_HOSTS = {
     "www.zlq.gov.cn",
 }
 _SOURCE_TYPES = {"html", "pdf"}
+_AUTHORITY_TIERS = {"A", "B", "C", "legacy_reviewed"}
+_AUDIENCES = {"public", "caregiver", "professional", "mixed"}
+_CONTENT_LAYERS = {"public_education", "policy_service", "professional_reference"}
+_RISK_LEVELS = {"standard", "sensitive", "high"}
 _EXTRACTORS = {
     "who_article",
     "who_qa",
@@ -74,6 +80,10 @@ class CorpusSource:
     license_note: str
     required_phrases: tuple[str, ...]
     landing_url: str | None = None
+    authority_tier: str = "legacy_reviewed"
+    audience: str = "public"
+    content_layer: str = "public_education"
+    risk_level: str = "standard"
 
 
 @dataclass(frozen=True, slots=True)
@@ -230,6 +240,12 @@ def _load_source_catalog(
                 raw_source, "required_phrases", label
             ),
             landing_url=_optional_text(raw_source, "landing_url", label),
+            authority_tier=_optional_text(raw_source, "authority_tier", label)
+            or "legacy_reviewed",
+            audience=_optional_text(raw_source, "audience", label) or "public",
+            content_layer=_optional_text(raw_source, "content_layer", label)
+            or "public_education",
+            risk_level=_optional_text(raw_source, "risk_level", label) or "standard",
         )
         _validate_source(source, label)
         if source.source_id in source_ids:
@@ -293,44 +309,86 @@ def prepare_corpus(
     max_bytes: int = 20_000_000,
     min_characters: int = 500,
     refresh: bool = False,
+    continue_on_error: bool = False,
+    progress_path: str | Path | None = None,
 ) -> CorpusBuildResult:
     """Download, extract, clean, deduplicate, and save an approved corpus."""
     corpus_id, sources = load_source_catalog(catalog_path)
     raw_directory = Path(raw_dir)
     output_path = Path(processed_path)
     audit_path = Path(report_path)
+    progress_file = Path(progress_path) if progress_path is not None else None
     raw_directory.mkdir(parents=True, exist_ok=True)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     audit_path.parent.mkdir(parents=True, exist_ok=True)
+    if progress_file is not None:
+        progress_file.parent.mkdir(parents=True, exist_ok=True)
 
     build_time = datetime.now(UTC).replace(microsecond=0).isoformat()
     cleaned_documents: list[Document] = []
     source_results: list[SourceResult] = []
+    failed_sources: list[dict[str, str]] = []
+
+    def write_progress() -> None:
+        if progress_file is None:
+            return
+        completed_ids = {result.source_id for result in source_results}
+        failed_ids = {item["source_id"] for item in failed_sources}
+        payload = {
+            "corpus_id": corpus_id,
+            "catalog_path": Path(catalog_path).as_posix(),
+            "updated_at_utc": datetime.now(UTC).replace(microsecond=0).isoformat(),
+            "total_sources": len(sources),
+            "downloaded_source_ids": [
+                source.source_id
+                for source in sources
+                if (
+                    raw_directory
+                    / f"{source.source_id}{'.pdf' if source.source_type == 'pdf' else '.html'}"
+                ).exists()
+            ],
+            "validated_source_ids": [
+                source.source_id for source in sources if source.source_id in completed_ids
+            ],
+            "failed_sources": failed_sources,
+            "pending_source_ids": [
+                source.source_id
+                for source in sources
+                if source.source_id not in completed_ids | failed_ids
+            ],
+        }
+        _atomic_write_text(
+            progress_file,
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        )
+
+    write_progress()
 
     for source in sources:
-        suffix = ".pdf" if source.source_type == "pdf" else ".html"
-        raw_path = raw_directory / f"{source.source_id}{suffix}"
-        if refresh or not raw_path.exists():
-            raw_content = _download(source.url, timeout_seconds, max_bytes)
-            _atomic_write_bytes(raw_path, raw_content)
-        else:
-            raw_content = raw_path.read_bytes()
-            if len(raw_content) > max_bytes:
-                raise ValueError(f"cached source exceeds max_bytes: {source.source_id}")
+        try:
+            suffix = ".pdf" if source.source_type == "pdf" else ".html"
+            raw_path = raw_directory / f"{source.source_id}{suffix}"
+            if refresh or not raw_path.exists():
+                raw_content = _download(source.url, timeout_seconds, max_bytes)
+                _atomic_write_bytes(raw_path, raw_content)
+            else:
+                raw_content = raw_path.read_bytes()
+                if len(raw_content) > max_bytes:
+                    raise ValueError(f"cached source exceeds max_bytes: {source.source_id}")
 
-        extracted_text = (
-            extract_pdf_text(raw_content, source.title)
-            if source.source_type == "pdf"
-            else extract_html_text(raw_content, source.extractor, source.title)
-        )
-        _validate_extracted_text(source, extracted_text, min_characters)
-        _verify_required_phrases(source, extracted_text)
+            extracted_text = (
+                extract_pdf_text(raw_content, source.title)
+                if source.source_type == "pdf"
+                else extract_html_text(raw_content, source.extractor, source.title)
+            )
+            _validate_extracted_text(source, extracted_text, min_characters)
+            _verify_required_phrases(source, extracted_text)
 
-        raw_hash = hashlib.sha256(raw_content).hexdigest()
-        document_id = hashlib.sha256(extracted_text.encode("utf-8")).hexdigest()
-        document = Document(
-            page_content=extracted_text,
-            metadata={
+            raw_hash = hashlib.sha256(raw_content).hexdigest()
+            document_id = hashlib.sha256(extracted_text.encode("utf-8")).hexdigest()
+            document = Document(
+                page_content=extracted_text,
+                metadata={
                 "source": source.url,
                 "source_id": source.source_id,
                 "source_name": source.title,
@@ -342,17 +400,21 @@ def prepare_corpus(
                 "extractor": source.extractor,
                 "landing_url": source.landing_url,
                 "license_note": source.license_note,
+                "authority_tier": source.authority_tier,
+                "audience": source.audience,
+                "content_layer": source.content_layer,
+                "risk_level": source.risk_level,
                 "accessed_at_utc": build_time,
                 "raw_path": raw_path.as_posix(),
                 "raw_sha256": raw_hash,
                 "document_id": document_id,
                 "char_count": len(extracted_text),
-            },
-        )
-        cleaned = clean_document(document)
-        cleaned_documents.append(cleaned)
-        source_results.append(
-            SourceResult(
+                },
+            )
+            cleaned = clean_document(document)
+            cleaned_documents.append(cleaned)
+            source_results.append(
+                SourceResult(
                 source_id=source.source_id,
                 title=source.title,
                 publisher=source.publisher,
@@ -367,8 +429,21 @@ def prepare_corpus(
                 document_id=document_id,
                 cleaned_content_hash=str(cleaned.metadata["cleaned_content_hash"]),
                 verified_phrase_count=len(source.required_phrases),
+                )
             )
-        )
+        except Exception as error:
+            failed_sources.append(
+                {
+                    "source_id": source.source_id,
+                    "error_type": type(error).__name__,
+                    "message": str(error),
+                }
+            )
+            write_progress()
+            if not continue_on_error:
+                raise
+            continue
+        write_progress()
 
     deduplication = deduplicate_documents(cleaned_documents)
     _write_jsonl(output_path, deduplication.unique_documents)
@@ -392,6 +467,9 @@ def prepare_corpus(
         "generated_at_utc": build_time,
         "catalog_path": Path(catalog_path).as_posix(),
         "processed_path": output_path.as_posix(),
+        "catalog_source_count": len(sources),
+        "successful_source_count": len(source_results),
+        "failed_source_count": len(failed_sources),
         "input_count": deduplication.input_count,
         "unique_count": deduplication.unique_count,
         "duplicate_count": deduplication.duplicate_count,
@@ -411,8 +489,10 @@ def prepare_corpus(
         },
         "duplicates": [asdict(item) for item in deduplication.duplicates],
         "sources": [asdict(item) for item in source_results],
+        "source_failures": failed_sources,
     }
     _atomic_write_text(audit_path, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+    write_progress()
 
     return CorpusBuildResult(
         corpus_id=corpus_id,
@@ -437,6 +517,14 @@ def _validate_source(source: CorpusSource, label: str) -> None:
         raise ValueError(f"{label} PDF source must use pdf_text")
     if source.source_type == "html" and source.extractor == "pdf_text":
         raise ValueError(f"{label} HTML source cannot use pdf_text")
+    if source.authority_tier not in _AUTHORITY_TIERS:
+        raise ValueError(f"{label}.authority_tier is unsupported: {source.authority_tier}")
+    if source.audience not in _AUDIENCES:
+        raise ValueError(f"{label}.audience is unsupported: {source.audience}")
+    if source.content_layer not in _CONTENT_LAYERS:
+        raise ValueError(f"{label}.content_layer is unsupported: {source.content_layer}")
+    if source.risk_level not in _RISK_LEVELS:
+        raise ValueError(f"{label}.risk_level is unsupported: {source.risk_level}")
     if not re.fullmatch(r"[a-z0-9_]+", source.source_id):
         raise ValueError(f"{label}.source_id must use lowercase letters, numbers, and underscores")
 
@@ -472,8 +560,21 @@ def _download(url: str, timeout_seconds: int, max_bytes: int) -> bytes:
         url,
         headers={"User-Agent": "mental-health-rag-learning-project/0.1"},
     )
-    with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
-        content = response.read(max_bytes + 1)
+    content: bytes | None = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+                content = response.read(max_bytes + 1)
+            break
+        except urllib.error.HTTPError as error:
+            if error.code not in {408, 429, 500, 502, 503, 504} or attempt == 2:
+                raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            if attempt == 2:
+                raise
+        time.sleep(0.5 * (attempt + 1))
+    if content is None:
+        raise RuntimeError(f"download failed without an exception: {url}")
     if len(content) > max_bytes:
         raise ValueError(f"download exceeds max_bytes: {url}")
     if not content:
@@ -539,7 +640,9 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--raw-dir", default="data/raw/corpus_v1")
     parser.add_argument("--output", default="data/processed/corpus_v1.jsonl")
     parser.add_argument("--report", default="data/reports/corpus_v1_report.json")
+    parser.add_argument("--progress")
     parser.add_argument("--refresh", action="store_true")
+    parser.add_argument("--continue-on-error", action="store_true")
     return parser.parse_args()
 
 
@@ -552,6 +655,8 @@ def main() -> None:
         args.output,
         args.report,
         refresh=args.refresh,
+        continue_on_error=args.continue_on_error,
+        progress_path=args.progress,
     )
     print(json.dumps(asdict(result), ensure_ascii=False, default=str, indent=2))
 

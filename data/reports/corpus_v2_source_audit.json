@@ -4,9 +4,9 @@
   "decision_rule": "只有官方来源、中文原文、稳定可访问、正文可完整解析、语义锚点按顺序保留且适用范围符合公众科普定位的资料，才进入正式语料清单。",
   "summary": {
     "inherited_sources": 16,
-    "accepted_additions": 6,
-    "formal_catalog_sources": 22,
-    "deferred_candidates": 7,
+    "accepted_additions": 7,
+    "formal_catalog_sources": 23,
+    "deferred_candidates": 8,
     "excluded_candidates": 3
   },
   "accepted": [
@@ -59,6 +59,15 @@
       "verified_phrase_count": 3,
       "decision": "accepted",
       "quality_note": "区分抑郁情绪、抑郁症状和抑郁症，并明确建议由正规医疗机构评估；正文末尾页面控件经空元素解析修复后已排除。"
+    },
+    {
+      "source_id": "who_violence_against_children",
+      "title": "暴力侵害儿童行为",
+      "publisher": "世界卫生组织",
+      "extracted_chars": 2835,
+      "verified_phrase_count": 3,
+      "decision": "accepted",
+      "quality_note": "与虐待儿童来源存在主题联系，但新增同伴欺凌、网络欺凌、约会暴力、心理健康后果和多层面预防支持，保留差异化覆盖。"
     }
   ],
   "deferred": [
@@ -97,6 +106,16 @@
       "decision": "deferred",
       "extracted_chars": 2529,
       "reason": "官方中文正文和语义锚点均通过技术核验，但当前项目优先补齐一般公众高频心理健康科普；该主题保留在候选池，待核心主题覆盖充分后再纳入。"
+    },
+    {
+      "title": "积极养育指南",
+      "publisher": "联合国儿童基金会驻华办事处",
+      "source_class": "parenting_public_education_guide",
+      "decision": "deferred",
+      "official_pdf_bytes": 2738627,
+      "pdf_pages": 21,
+      "pypdf_extracted_chars": 7631,
+      "reason": "官方 PDF 可稳定下载且文字可提取，但图文分栏使每页案例与建议的抽取顺序和视觉阅读顺序不一致；需要版面感知解析并逐页核对后才能入库。"
     },
     {
       "title": "儿童心理健康支持系列",

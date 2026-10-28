@@ -1,0 +1,199 @@
+{
+  "corpus_id": "mental_health_zh_v6",
+  "base_catalog": "corpus_v5.json",
+  "purpose": "使真实通过校验的权威原始资料稳定超过 100 篇，并补充慢性病、疼痛、围产期和气候压力背景。",
+  "language": "zh-CN",
+  "selection_policy": "背景资料须来自 WHO 中文事实清单，并在检索时与核心心理健康科普分层。",
+  "sources": [
+    {
+      "source_id": "who_anaemia",
+      "title": "贫血",
+      "publisher": "世界卫生组织",
+      "topic": "躯体症状、认知表现与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/anaemia",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "贫血是一项重大公共卫生关切，主要影响幼儿、孕妇和产妇以及经期少女和妇女。",
+        "低收入和中等偏下低收入国家的贫血负担最重，特别是影响到生活在农村地区、较贫困家庭和没有接受过正规教育的人群。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_climate_change_heat_and_health",
+      "title": "气候变化、热与健康",
+      "publisher": "世界卫生组织",
+      "topic": "高温、压力与健康风险",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/climate-change-heat-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "高温脆弱性既受生理因素（如年龄和健康状况）影响，也受暴露因素（如职业和社会经济条件）影响。",
+        "概述"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_fragility_fractures",
+      "title": "脆性骨折",
+      "publisher": "世界卫生组织",
+      "topic": "老年功能、康复与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/fragility-fractures",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2019年，全球新增骨折1.78亿例，较1990年新增骨折绝对数量增长33.4%，部分原因是人口增长和老龄化。",
+        "同年记录4.55亿例急性或长期骨折症状现患病例，自1990年以来绝对流行率增加了70.1%。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_hypertension",
+      "title": "高血压",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病预防与自我管理",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/hypertension",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2024年，全世界估计有14亿30-79岁成年人患有高血压，占该年龄段总人口的33%。",
+        "三分之二的30-79岁成年高血压患者生活在低收入和中等收入国家。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_kidney_disease",
+      "title": "肾脏疾病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/kidney-disease",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "肾脏疾病包括急性肾损伤和慢性肾病。",
+        "初级卫生保健中使用的简单血液（血清肌酐）检测和尿液（白蛋白尿）检测可以发现慢性肾病。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_newborn_mortality",
+      "title": "新生儿死亡",
+      "publisher": "世界卫生组织",
+      "topic": "围产期健康与家庭支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/newborn-mortality",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "生命的第一个月是儿童生存最脆弱期。2022年共有230万新生儿死亡。",
+        "早产、分娩并发症（出生窒息/创伤）、新生儿感染和先天性畸形仍是造成新生儿死亡的主要原因。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_osteoarthritis",
+      "title": "骨关节炎",
+      "publisher": "世界卫生组织",
+      "topic": "慢性疼痛、功能与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/osteoarthritis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2019年，全球约有5.28亿人患有骨关节炎；自1990年以来增长了113% (1)。",
+        "约有73%的骨关节炎患者年龄在55岁以上，且60%为女性(1)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_pre_eclampsia",
+      "title": "子痫前期",
+      "publisher": "世界卫生组织",
+      "topic": "孕产妇健康与家庭支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/pre-eclampsia",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "关键事实",
+        "先兆子痫是一种高血压疾病，影响全球3-8%的分娩女性(1)。",
+        "先兆子痫可以发展为子痫，引发抽搐，有可能危及生命。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_rheumatoid_arthritis",
+      "title": "类风湿关节炎",
+      "publisher": "世界卫生组织",
+      "topic": "慢性疼痛、功能与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/rheumatoid-arthritis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2019年，全世界有1800万人患有类风湿性关节炎(1)。",
+        "大约70%的类风湿性关节炎患者是女性，55%的患者年龄超过55岁(1)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_sickle_cell_disease",
+      "title": "镰状细胞病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病、疼痛与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/sickle-cell-disease",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "镰状细胞病是一种严重的遗传性血液疾病。它由HBB基因突变引起，导致异常镰状红细胞，进而阻塞血流并引致严重的并发症。",
+        "2021年，全球估计有774万人患有镰状细胞病，新增新生患儿51.5万人。病例主要集中在撒哈拉以南非洲，该地区病例占全球病例总数近80%。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    }
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "corpus_id": "mental_health_zh_v4",
+  "base_catalog": "corpus_v3.json",
+  "purpose": "扩充与心理健康直接相关的生命周期、社会决定因素、慢性病心理社会影响和预防性科普资料。",
+  "language": "zh-CN",
+  "selection_policy": "仅接纳 WHO 中文事实清单中可稳定解析、正文不少于 500 字符且具备三个顺序语义锚点的页面。",
+  "sources": [
+    {
+      "source_id": "who_adolescent_pregnancy",
+      "title": "青少年怀孕",
+      "publisher": "世界卫生组织",
+      "topic": "青少年身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-pregnancy",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "根据2019年的数据，15-19岁少女中55%的意外怀孕以流产告终，而在低收入和中等收入国家流产通常在不安全条件下进行(1)。",
+        "预防少女怀孕以及与怀孕相关的死亡和发病是在整个生命过程中实现积极健康结果的基础，也是实现与孕产妇和新生儿健康相关的可持续发展目标的必要条件。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_adolescents_health_risks_and_solutions",
+      "title": "青少年：健康风险和解决办法",
+      "publisher": "世界卫生组织",
+      "topic": "青少年健康风险",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescents-health-risks-and-solutions",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2021年，超过150万10-24岁的青少年和青年死亡，每天约4500人。",
+        "在所有年龄组中，10-14岁的青少年死亡风险最低。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_ageing_and_health",
+      "title": "老龄化与健康",
+      "publisher": "世界卫生组织",
+      "topic": "老年身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/ageing-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "概述",
+        "世界各地人们的寿命在延长。今天，大多数人的期望寿命已达六十岁以上。世界各国老年人数量和占比呈上升趋势。",
+        "关于衰老的解释"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_assistive_technology",
+      "title": "辅助技术",
+      "publisher": "世界卫生组织",
+      "topic": "残障支持与社会参与",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/assistive-technology",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "辅助产品范围很广，涵盖轮椅、眼镜、假肢、白手杖和助听器等器具以及语音识别或时间管理软件和字幕等数字解决方案。",
+        "大多数使用辅助技术的人使用多种产品，因此提供综合服务非常重要。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_blindness_and_visual_impairment",
+      "title": "失明和视力损害",
+      "publisher": "世界卫生组织",
+      "topic": "感官障碍与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "在全球范围内，至少有22亿人近视力或远视力受损。其中至少有10亿人的视力损害原本可以预防，或尚未得到处理。",
+        "屈光不正和白内障是造成视力损害和盲症的主要原因。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_children_new_threats_to_health",
+      "title": "儿童健康面临的新威胁",
+      "publisher": "世界卫生组织",
+      "topic": "儿童身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/children-new-threats-to-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "概述",
+        "保护儿童和确保他们的未来需采取以下重要行动：",
+        "将儿童置于与可持续发展目标议程相关的每项政策的核心；"
+      ],
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_climate_change_and_health",
+      "title": "气候变化与健康",
+      "publisher": "世界卫生组织",
+      "topic": "环境压力与健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/climate-change-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "气候变化直接导致了热浪、野火、洪水、热带风暴和飓风等人道主义突发事件，而且这些事件的规模、频率和强度都在增加。",
+        "据估计，到2030年时在卫生方面造成的直接损失费用（不包括诸如农业及水和环境卫生等对健康起到决定性作用的部门的费用）为每年20-40亿美元。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_comprehensive_sexuality_education",
+      "title": "全面性教育",
+      "publisher": "世界卫生组织",
+      "topic": "青少年教育与社会心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/comprehensive-sexuality-education",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "证据表明，适当开展高质量的全面性教育能够推迟首次性行为并减少性风险行为，同时提高避孕措施的使用。",
+        "证据表明，全面性教育不会助长性活动，也不会鼓励较早发生性行为。"
+      ],
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_deafness_and_hearing_loss",
+      "title": "耳聋和听力损失",
+      "publisher": "世界卫生组织",
+      "topic": "感官障碍与社会参与",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/deafness-and-hearing-loss",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "到2050年，预计将有近25亿人患有某种程度的听力损失，超过7亿人将需要听力康复服务。",
+        "全球约有9510万5-19岁的儿童患有听力损失。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_endometriosis",
+      "title": "子宫内膜异位症",
+      "publisher": "世界卫生组织",
+      "topic": "女性健康与心理社会影响",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/endometriosis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "子宫内膜异位症估计影响到全球约 10% 的育龄妇女（约 1.9 亿人）。",
+        "子宫内膜异位症是一种慢性疾病，症状包括：经期剧烈疼痛；月经量过多；慢性盆腔疼痛（月经周期结束后疼痛仍不消失）；不孕；以及腹胀和恶心。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_epilepsy",
+      "title": "癫痫",
+      "publisher": "世界卫生组织",
+      "topic": "神经系统疾病与心理社会健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/epilepsy",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "癫痫是影响所有年龄人群的一种脑部慢性非传染性疾病。",
+        "全世界有大约5000万癫痫患者，使之成为全球范围内最常见的神经系统疾病之一。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_family_planning_contraception",
+      "title": "计划生育和避孕",
+      "publisher": "世界卫生组织",
+      "topic": "生殖健康与自主决策",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/family-planning-contraception",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "目前有许多不同的避孕方法可用于预防意外怀孕，包括临时性（可逆）方法和永久性方法。",
+        "仅有安全套这种避孕方法可以在避孕的同时预防性传播感染（包括艾滋病毒）的传播。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_female_genital_mutilation",
+      "title": "女性生殖器残割",
+      "publisher": "世界卫生组织",
+      "topic": "暴力创伤与女性健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/female-genital-mutilation",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "在30个有残割女性生殖器习俗的非洲、中东和亚洲国家中，有超过2.3亿在世的女童和妇女接受了女性生殖器残割。",
+        "残割女性生殖器主要针对婴儿期至15岁的女童。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "who_gender",
+      "title": "性别与健康",
+      "publisher": "世界卫生组织",
+      "topic": "性别与健康公平",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/gender",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "概述",
+        "定义",
+        "性别对健康公平的影响"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_headache_disorders",
+      "title": "头痛症",
+      "publisher": "世界卫生组织",
+      "topic": "慢性症状与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/headache-disorders",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "头痛疾病是最常见的神经系统疾病之一。",
+        "按年龄标化伤残调整生命年计算，2021年，偏头痛在总体神经系统疾病负担中排名第三。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_healthy_diet",
+      "title": "健康饮食",
+      "publisher": "世界卫生组织",
+      "topic": "生活方式与身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/healthy-diet",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "饮食在塑造个人和人群健康和福祉方面发挥着关键作用，不健康饮食是疾病和残疾的主要危险因素。",
+        "健康饮食有助于预防一切形式的营养不良和非传染性疾病，包括糖尿病、心脏病、卒中和癌症。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_hiv_aids",
+      "title": "艾滋病毒和艾滋病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/hiv-aids",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "艾滋病毒仍然是一个重大的全球公共卫生问题，迄今为止估计已夺去4 410万人的生命。该病毒目前在全球所有国家传播。",
+        "截至2024年底，估计有4080万艾滋病毒感染者，其中65%在世卫组织非洲区域。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_human_rights_and_health",
+      "title": "人权与健康",
+      "publisher": "世界卫生组织",
+      "topic": "权利、尊严与健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/human-rights-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "人权是所有人的普遍权利，不分种族、肤色、性别、语言、宗教、政治或其他见解、国籍或社会出身、财产、出生或其他身份。",
+        "健康权和其他与健康相关的人权是国际人权文书所载的具有法律约束力的承诺。《世界卫生组织组织法》也承认健康权。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_infertility",
+      "title": "不孕不育症",
+      "publisher": "世界卫生组织",
+      "topic": "生殖健康与心理社会影响",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/infertility",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "不孕不育症影响着全球数以百万计的人们，并对其家庭和社区产生影响。据估计，全世界每六个育龄人口中约有一人在其一生中经历不孕不育症。",
+        "男性生殖系统最常见的不育因素是射精问题、无精或精子过少，或精子形态和运动异常。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_low_back_pain",
+      "title": "腰痛",
+      "publisher": "世界卫生组织",
+      "topic": "慢性疼痛与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/low-back-pain",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2020年，腰痛影响了全球6.19亿人。据估计，到2050年，病例数将增加到8.43亿例，主要推动因素是人口增长和老龄化(1)。",
+        "腰痛是全世界残疾的主要原因，也是可能受益于康复服务的人数最多的疾病。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_menstrual_health",
+      "title": "月经健康",
+      "publisher": "世界卫生组织",
+      "topic": "女性健康与社会参与",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/menstrual-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "据估计，全球有21亿妇女和少女会来月经，但关于月经的可靠研究却十分有限。",
+        "超过三分之二的妇女和女童在月经期间会感到疼痛；对于其中一小部分人来说，痛经可能非常严重，并且可能在月经周期的其他时间段出现。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_multiple_sclerosis",
+      "title": "多发性硬化",
+      "publisher": "世界卫生组织",
+      "topic": "神经系统疾病与心理社会健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/multiple-sclerosis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "多发性硬化症（MS）影响人的认知、情感、运动、感觉或视觉功能，是人体免疫系统攻击大脑和脊髓的结果。",
+        "据估计，全世界有180多万人患有多发性硬化症。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_obesity_and_overweight",
+      "title": "肥胖和超重",
+      "publisher": "世界卫生组织",
+      "topic": "生活方式、污名与健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/obesity-and-overweight",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2022年，世界上每8人中就有1人患有肥胖症。",
+        "自1990年以来，全球成人肥胖增加了一倍多，青少年肥胖增加了三倍。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_opioid_overdose",
+      "title": "阿片类药物过量",
+      "publisher": "世界卫生组织",
+      "topic": "物质使用与伤害预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/opioid-overdose",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "阿片类药物通常用于镇痛，包括吗啡、芬太尼和曲马多等药物。",
+        "阿片类药物的非医疗使用、长期使用、滥用和在没有医疗监督的情况下使用会导致阿片类药物依赖和其它健康问题。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "who_palliative_care",
+      "title": "姑息治疗",
+      "publisher": "世界卫生组织",
+      "topic": "严重疾病与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/palliative-care",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "明确承认缓和医疗是人类健康权的一部分。应通过以人为本的综合卫生服务提供缓和医疗，其中应特别重视个人的具体需求和偏好。",
+        "阿片类药物也能缓解其他常见的令人难受的身体症状，包括呼吸困难。早期控制这类症状是一项道德义务，以减轻痛苦和尊重人的尊严。",
+        "难以获得缓和医疗"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_parkinson_disease",
+      "title": "帕金森病",
+      "publisher": "世界卫生组织",
+      "topic": "神经系统疾病与心理社会健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/parkinson-disease",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "在全球范围内，帕金森病导致的残疾和死亡正在迅速增加。",
+        "由训练有素的非专业卫生保健工作者进行帕金森病临床诊断并简化治疗指南，可在初级保健环境中提供更好的管理。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_polycystic_ovary_syndrome",
+      "title": "多囊卵巢综合征",
+      "publisher": "世界卫生组织",
+      "topic": "女性健康与心理社会影响",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/polycystic-ovary-syndrome",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "估计有10-13%的育龄女性患有多囊卵巢综合症。据估计，全球高达70%患多囊卵巢综合症的女性不知道自己患有这种疾病。",
+        "多囊卵巢综合征是全球女性不排卵的最常见原因，也是不孕的主要原因。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_post_covid_19_condition_long_covid",
+      "title": "2019冠状病毒病后遗症",
+      "publisher": "世界卫生组织",
+      "topic": "长期症状与身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/post-covid-19-condition-(long-covid)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "大多数COVID-19患者完全康复，但有些患者出现中长期影响一个或多个身体系统的COVID-19后遗症。",
+        "每百名COVID-19患者中约有6人会出现COVID-19后遗症。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_primary_health_care",
+      "title": "初级卫生保健",
+      "publisher": "世界卫生组织",
+      "topic": "基层健康服务与可及性",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/primary-health-care",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2022年，由于自付医疗支出占家庭预算的10%或更多，全球超过16亿人面临陷入贫困或更深度贫困的风险。",
+        "到2030年，在低收入和中等收入国家扩大初级卫生保健干预措施可以挽救6000万人的生命，并将平均预期寿命提高3.7岁。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_refugee_and_migrant_health",
+      "title": "难民和移民健康",
+      "publisher": "世界卫生组织",
+      "topic": "迁移、社会支持与健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/refugee-and-migrant-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "全球约八分之一（或超过十亿）的人为流动人口。",
+        "其中，估计3.04亿是国际移民（2024年），是1990年（1.54亿）的两倍。包括约1.7亿移民工人和700万国际学生。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_refugee_and_migrant_mental_health",
+      "title": "难民和移民心理健康",
+      "publisher": "世界卫生组织",
+      "topic": "迁移与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/refugee-and-migrant-mental-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "低收入和中等收入国家收容了世界上71%的难民和其他需要国际保护的人(1)。",
+        "面对逆境的难民和移民比东道国人口更有可能出现抑郁、焦虑、创伤后应激障碍、自杀和精神病等精神健康问题。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_rehabilitation",
+      "title": "康复",
+      "publisher": "世界卫生组织",
+      "topic": "功能恢复与社会参与",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/rehabilitation",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "与促进良好健康、预防疾病、治疗和姑息治疗服务一样，康复服务是全民健康覆盖的重要内容。",
+        "康复服务有助于儿童、成人或老人在日常活动中尽可能自立，能够参与教育、工作和娱乐活动，并在生活中发挥有益的作用，如照顾家人。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_self_care_health_interventions",
+      "title": "自我保健干预措施",
+      "publisher": "世界卫生组织",
+      "topic": "自我保健与专业支持边界",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/self-care-health-interventions",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "自我护理是指无论是否有医务人员或照护人员的支持，个人、家庭和社区能够促进和维护自身健康、预防疾病以及应对疾病。",
+        "自我护理行为包括有益健康的习惯和生活方式选择，如健康饮食、保持身体活动、戒烟、避免饮酒、充足睡眠以及与他人保持联系。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_stroke",
+      "title": "中风",
+      "publisher": "世界卫生组织",
+      "topic": "神经系统疾病与康复支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/stroke",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2021年，卒中是全球第三大死亡和残疾原因，估计共9380万例。",
+        "2021年新发卒中病例为1190万。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_tobacco",
+      "title": "烟草",
+      "publisher": "世界卫生组织",
+      "topic": "物质使用与健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/tobacco",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "烟草损害身体的几乎每个器官，导致癌症、心脏病、中风、肺部疾病、生育能力下降、免疫力减弱以及过早死亡。",
+        "烟草每年导致700多万人死亡，其中包括160多万接触二手烟雾的非吸烟者。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_urban_health",
+      "title": "城市卫生",
+      "publisher": "世界卫生组织",
+      "topic": "城市环境与心理社会健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/urban-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "全世界超过55%的人口生活在城市地区，到2050年，这一比例将上升至68%。",
+        "近40%的城市居民无法获得得到安全管理的环境卫生服务，许多人无法获取充足的饮用水。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_women_s_health",
+      "title": "妇女健康",
+      "publisher": "世界卫生组织",
+      "topic": "女性全生命周期身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/women-s-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "婴儿期和儿童期（0-9岁）",
+        "在婴儿期和儿童期，男童和女童的死亡率和死因十分类似。早产、出生窒息和感染是出生头一个月内的主要死因。出生头一个月是死亡危险最高的生命阶段。",
+        "在生命头五年中，肺炎、早产、出生窒息和腹泻是主要死亡原因。营养不良是45%的5岁以下儿童死亡的重要因素。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    }
+  ]
+}

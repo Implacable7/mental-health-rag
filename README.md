@@ -73,9 +73,9 @@ python -m mental_health_rag.corpus --refresh
 ### 语料库 v2 扩充清单
 
 `data/sources/corpus_v2.json` 通过 `base_catalog` 继承 v1 的 16 篇来源，只记录本版新增项，
-避免复制整份清单后出现两个版本各自修改、难以判断差异的问题。加载后得到 22 篇来源。
+避免复制整份清单后出现两个版本各自修改、难以判断差异的问题。加载后得到 23 篇来源。
 
-当前新增 6 篇来自世界卫生组织中文官网或中国政府网站发布、转载的权威科普材料，
+当前新增 7 篇来自世界卫生组织中文官网或中国政府网站发布、转载的权威科普材料，
 主题为创伤后应激障碍、自闭症、虐待儿童、突发事件心理支持、睡眠健康，以及抑郁情绪、
 抑郁症状和抑郁症的区别。
 本机真实验证结果如下：
@@ -87,6 +87,8 @@ python -m mental_health_rag.corpus --refresh
 - 睡眠健康核心信息及释义：抽取正文 2825 字，3 个语义锚点按原文顺序通过。
 - 出现抑郁表现，就是得了抑郁症吗：抽取正文 894 字，3 个语义锚点按原文顺序通过；
   页面明确标注作者为国家健康科普专家库成员、北京大学第六医院主任医师。
+- 暴力侵害儿童行为：抽取正文 2835 字，3 个语义锚点按原文顺序通过；补充同伴欺凌、
+  网络欺凌、家庭和约会暴力、心理健康后果及预防支持，避免只把儿童保护理解为家庭虐待。
 
 政府网页解析器显式处理 `img`、`br` 等 HTML 空元素，避免它们错误增加嵌套深度并把正文后的
 二维码、打印按钮或导航文字混入语料。对应回归测试会验证正文后的“扫一扫”等噪声未被提取。
@@ -168,6 +170,35 @@ python -m mental_health_rag.chunking `
 ```powershell
 conda activate mental-health-rag
 pytest tests/test_embeddings.py -q
+```
+
+## 权威语料库 v7 与断点续建
+
+当前冻结目录为 `data/sources/corpus_v7.json`。它通过逐版继承保留来源审计轨迹，共包含 135 篇原始资料；本轮真实构建结果为 135 篇成功、0 篇失败、0 篇精确重复，清洗后正文共 402,795 个字符。来源以 WHO 中文官网为主，并包含中国政府网、国家卫生健康委转载或发布的心理健康服务资料。主题分为核心心理健康科普、风险因素与特殊人群，以及和心理健康密切相关的慢性病、疼痛、康复、污名与社会决定因素背景资料。
+
+批量构建支持断点续建。原始文件按 `source_id` 缓存；`--progress` 文件逐篇记录已下载、已验证、失败和待处理来源；`--continue-on-error` 允许单篇网络失败后继续处理其他来源。失败来源不会进入清洗语料和统计结果，后续重跑会复用已经存在的缓存。
+
+```powershell
+conda activate mental-health-rag
+$env:PYTHONPATH = "src"
+python -m mental_health_rag.corpus `
+  --catalog data/sources/corpus_v7.json `
+  --raw-dir data/raw/corpus_v4 `
+  --output data/processed/corpus_v7.jsonl `
+  --report data/reports/corpus_v7_report.json `
+  --progress data/reports/corpus_v7_progress.json `
+  --continue-on-error
+```
+
+分块对照实验保留两组真实结果：`500/80`（块大小/重叠）得到 1,016 个片段；`400/60` 得到 1,274 个片段。后者中位长度 351 字、平均 331.06 字、最长 399 字，少于 100 字的片段为 5 个，占 0.39%。当前采用 `400/60` 作为进入检索实验的候选配置，但它仍需通过后续检索评估集验证，不能仅凭片段数量认定为最优。
+
+```powershell
+python -m mental_health_rag.chunking `
+  --input data/processed/corpus_v7.jsonl `
+  --output data/processed/chunks_v7_400.jsonl `
+  --report data/reports/chunks_v7_400_build.json `
+  --chunk-size 400 `
+  --chunk-overlap 60
 ```
 
 ## 安全边界

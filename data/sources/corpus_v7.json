@@ -1,0 +1,484 @@
+{
+  "corpus_id": "mental_health_zh_v7",
+  "base_catalog": "corpus_v6.json",
+  "purpose": "补充儿童发展、性与生殖健康、污名、环境神经风险、慢性病和健康素养背景，使知识库覆盖更完整。",
+  "language": "zh-CN",
+  "selection_policy": "背景资料只进入支持层；回答心理健康问题时优先召回核心心理健康与直接相关资料。",
+  "sources": [
+    {
+      "source_id": "who_ambient_outdoor_air_quality_and_health",
+      "title": "环境（室外）空气污染",
+      "publisher": "世界卫生组织",
+      "topic": "环境健康与身心负担",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "空气污染是影响健康的最大环境风险之一。各国通过降低空气污染水平可减少因中风、心脏病、肺癌以及慢性和急性呼吸道疾病，包括哮喘导致的疾病负担。",
+        "2019年，99%的世界人口住在没有达到世卫组织空气质量指南标准的地方。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_birth_defects",
+      "title": "出生缺陷",
+      "publisher": "世界卫生组织",
+      "topic": "儿童发展与家庭支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/birth-defects",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "据估计，全世界每年有24万名新生儿在出生后28天内死于先天性疾病。先天性疾病还导致全世界每年有17万名1个月至5岁儿童死亡。",
+        "先天性疾病可导致长期残疾，对个人、家庭、卫生保健系统和社会造成重大损失。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_child_mortality_under_5_years",
+      "title": "五岁以下儿童死亡",
+      "publisher": "世界卫生组织",
+      "topic": "儿童健康与家庭支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/child-mortality-under-5-years",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2024年，估计全球490万五岁以下儿童死亡，相当于每6秒就有1人死亡。",
+        "新生儿死亡（出生后28天内）为230万，占所有五岁以下死亡人数的47%。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_community_based_health_insurance_cbhi",
+      "title": "社区型医疗保险",
+      "publisher": "世界卫生组织",
+      "topic": "健康服务可及性与公平",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/community-based-health-insurance-CBHI",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "社区健康保险（CBHI）计划通常是自愿性的，由社区成员集资来分摊卫生保健费用。",
+        "尽管人们对这类计划抱有很大希望，但有证据表明，社区健康保险对参保者获得经济保护和所需卫生保健服务而言，作用并不大。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_condoms",
+      "title": "安全套",
+      "publisher": "世界卫生组织",
+      "topic": "性健康、知情选择与预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/condoms",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "如果一年中由男性伴侣在每次性行为时都正确使用男用安全套，能避免意外怀孕的女性比例为98%；而如果由女性使用女用安全套，则该比例为95%。",
+        "应当提供非评判性的、以人为本的信息，以支持使用安全套。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_electronic_waste_e_waste",
+      "title": "电子废物",
+      "publisher": "世界卫生组织",
+      "topic": "儿童神经发育与环境风险",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/electronic-waste-(e-waste)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "电子垃圾是世界上增多速度最快的固体废物(1)。",
+        "2019年，全球估计产生了5360万吨电子垃圾，但据记录，只有17.4%被正规收集和重新利用(2)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_heart_attack",
+      "title": "心脏病发作",
+      "publisher": "世界卫生组织",
+      "topic": "急性疾病识别与康复支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/heart-attack",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "在冠状动脉内脂肪沉积物破裂形成血栓后，往往会突然切断心脏某部分心肌的血流，从而导致心脏病发作，即急性心肌梗死。",
+        "心脏病发作和中风合计占心血管疾病所有死亡人数的85%，超过四分之三的心血管疾病死亡发生在低收入和中等收入国家。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_hepatitis_b",
+      "title": "乙型肝炎",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病、污名与健康支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/hepatitis-b",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "乙型肝炎（简称“乙肝”）是一种损害肝脏的病毒感染，可引起急性或慢性疾病。",
+        "世卫组织估计，2024年，有2.4亿人有慢性乙肝感染，每年有90万新发感染者。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_hepatitis_c",
+      "title": "丙型肝炎",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病、污名与健康支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/hepatitis-c",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "丙型肝炎（丙肝）是由丙肝病毒引起的一种肝脏炎症。",
+        "该病毒可造成急性或慢性肝炎感染，其严重程度从轻微病症到终身严重疾病，包括肝硬化和肝癌。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_herpes_simplex_virus",
+      "title": "单纯疱疹病毒",
+      "publisher": "世界卫生组织",
+      "topic": "性健康、污名与求助",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/herpes-simplex-virus",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "据估计，全球有38亿50岁以下的人(64%)感染1型单纯疱疹病毒，这是发生口腔疱疹的主要原因。",
+        "据估计，全世界有5.20亿年龄在15-49岁之间的人(13%)感染2型单纯疱疹病毒，这是发生生殖器疱疹的主要原因。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_human_papilloma_virus_and_cancer",
+      "title": "人乳头状瘤病毒与癌症",
+      "publisher": "世界卫生组织",
+      "topic": "女性健康、预防与知情选择",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "人乳头状瘤病毒是200种已知病毒的统称。它们不会引起大多数人的担忧，但一些高风险类感染很常见，并可能导致生殖器疣或癌症。",
+        "2019年，人乳头状瘤病毒引起约62万例女性癌症病例，造成7万例男性癌症病例(1)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_household_air_pollution_and_health",
+      "title": "家庭空气污染",
+      "publisher": "世界卫生组织",
+      "topic": "家庭环境与健康风险",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/household-air-pollution-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "按照目前的进度，预计到2030年，全球只有78%的人口能够采用清洁烹饪。这一缺口将导致近18亿人仍然无法获得清洁烹饪解决方案。",
+        "据估计，2021年，家庭空气污染每年造成290万人死亡，其中包括逾30.9万名5岁以下儿童死亡。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_immunization_coverage",
+      "title": "免疫覆盖",
+      "publisher": "世界卫生组织",
+      "topic": "健康素养与预防服务",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/immunization-coverage",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2025年，全球有1350万名儿童错过所有疫苗接种，即所谓的零剂次儿童。",
+        "2025年，预防白喉、破伤风和百日咳的第三剂疫苗（DTP3）的覆盖率为85%。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_lead_poisoning_and_health",
+      "title": "铅中毒与健康",
+      "publisher": "世界卫生组织",
+      "topic": "儿童神经发育与环境风险",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/lead-poisoning-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "铅暴露会影响身体多个系统，对幼童和育龄妇女的危害尤其严重。",
+        "铅分布在大脑、肝脏、肾脏和骨骼中。它可在牙齿和骨骼中储存下来，随着时间不断累积。人类的暴露程度通常通过测量血铅加以估测。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_lung_cancer",
+      "title": "肺癌",
+      "publisher": "世界卫生组织",
+      "topic": "严重疾病、烟草与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/lung-cancer",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "肺癌是造成全球癌症病例和死亡的主要原因，据估计，2022年新增病例达250万例，死亡人数达180万。",
+        "超过130万例男性肺癌病例和近50万女性肺癌病例是可以预防的，其中大多数病例（60%–70%）是吸烟造成的，其次是空气污染和职业暴露。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mercury_and_health",
+      "title": "汞与健康",
+      "publisher": "世界卫生组织",
+      "topic": "神经系统与环境风险",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mercury-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "汞是一种天然存在的元素，存在于空气、水和土壤中。",
+        "接触汞（即使是接触少量汞）可能会导致严重的健康问题，并对胎儿和幼儿发育构成威胁。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_oral_contraceptives",
+      "title": "口服避孕药",
+      "publisher": "世界卫生组织",
+      "topic": "生殖健康与知情选择",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/oral-contraceptives",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "复合口服避孕药（经常简称“避孕药”）含有低剂量的两种激素：雌激素和孕激素。",
+        "仅含孕激素的避孕药（又称“迷你避孕药”）只含一种激素（孕激素），不含雌激素。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_rubella",
+      "title": "风疹",
+      "publisher": "世界卫生组织",
+      "topic": "孕产妇与儿童健康预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/rubella",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "风疹是通过空气飞沫传播的一种传染性病毒感染，最常见于儿童和年轻人。",
+        "风疹是导致先天缺陷的一种主要原因，可以通过接种疫苗进行预防，据估计，全世界每年有10万名婴儿在出生时患有先天性风疹综合征。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_shingles_herpes_zoster",
+      "title": "带状疱疹",
+      "publisher": "世界卫生组织",
+      "topic": "慢性疼痛与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/shingles-(herpes-zoster)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "带状疱疹是一种由水痘-带状疱疹病毒重新激活引起的疼痛性皮疹。该病毒也导致水痘。",
+        "任何患过水痘的人都可能患上带状疱疹，尽管它在50岁以上的成年人中更常见。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_sodium_reduction",
+      "title": "减盐",
+      "publisher": "世界卫生组织",
+      "topic": "生活方式与慢性病预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/sodium-reduction",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "几乎所有人群都摄入过多的钠。",
+        "与高钠饮食相关的主要健康影响是血压升高，增加患心血管疾病、胃癌、肥胖症、骨质疏松症、梅尼埃病和肾脏疾病的风险。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_sugars_and_dental_caries",
+      "title": "糖与龋齿",
+      "publisher": "世界卫生组织",
+      "topic": "生活方式与自我照护",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/sugars-and-dental-caries",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "龋齿（也称为蛀牙）是全球最常见的非传染性疾病，患者高达 25 亿人。",
+        "龋齿是可以预防的，但在许多国家构成重大健康负担，并影响人们的一生，导致疼痛、不适、进食、睡眠困难、牙齿脱落和生活质量下降。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_syphilis",
+      "title": "梅毒",
+      "publisher": "世界卫生组织",
+      "topic": "性健康、污名与求助",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/syphilis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "大多数感染并无症状或未被识别。",
+        "世卫组织估计，2022年有800万15至49岁成年人感染梅毒。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_the_top_10_causes_of_death",
+      "title": "全球十大死因",
+      "publisher": "世界卫生组织",
+      "topic": "健康风险理解与健康素养",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/the-top-10-causes-of-death",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "2021年，全球6800万例死亡中，10大死因占57%，造成3900万例死亡。",
+        "死亡原因可分为三类：传染性（传染病和寄生虫病以及产妇、围产期和营养状况）、非传染性（慢性）和伤害。",
+        "全球主要死亡原因"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_trans_fat",
+      "title": "反式脂肪",
+      "publisher": "世界卫生组织",
+      "topic": "营养与慢性病预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/trans-fat",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "反式脂肪或反式脂肪酸是来自工业生产的或天然来源的不饱和脂肪酸。",
+        "全球每年共有超过27.8万例死亡可归因于摄入工业生产的反式脂肪。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_tuberculosis",
+      "title": "结核病",
+      "publisher": "世界卫生组织",
+      "topic": "传染病、污名与社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/tuberculosis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2024年，结核病还是艾滋病毒感染者的头号杀手，以及导致抗微生物药物耐药性相关死亡的一个主要原因。",
+        "2024年，全球估计有1070万人罹患结核病，其中包括580万名男性、370万名女性和120万名儿童。所有国家和所有年龄组都有结核病感染。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    }
+  ]
+}

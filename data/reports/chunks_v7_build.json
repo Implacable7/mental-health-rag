@@ -1,0 +1,713 @@
+{
+  "build_id": "caf97697c65ce1aa6eccb1649edaf2092cd3e689b8997050deb14e2c8f1bf904",
+  "configuration": {
+    "chunk_overlap": 80,
+    "chunk_size": 500,
+    "chunking_method": "recursive_character",
+    "chunking_version": "1",
+    "keep_separator": "end",
+    "length_function": "len",
+    "separators": [
+      "\n",
+      "。",
+      "！",
+      "？",
+      "；",
+      "，",
+      " ",
+      ""
+    ]
+  },
+  "documents": [
+    {
+      "chunk_count": 5,
+      "document_id": "ab349d8d8d299d9a6792f80778198ea5ff051f1128aea40bf94a26da65f32e70",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "105f5dc2e446c73d9e4fc336e76f6a32191f7e4c4aea9ac6a1cf0baeb4928ab7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-disorders"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "327c69faa0cb5c8f122d03d1d0fa7f8f5fe5faea898281b032ac143bbe686022",
+      "source": "https://www.who.int/zh/news-room/questions-and-answers/item/stress"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "4f7ea12d388a2e23bbc6817c721a8986d7f1f46101660f0953a95de67f00f437",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/depression"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "a652139f85e2f7e27f32ee1c72fa730dbaad8b29762c7366ebdc583cf92842db",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/anxiety-disorders/"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "e128cc174c9300d8c5d17dfe4d5c4cbaf9350af6dbdb42e625937499853916dd",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/bipolar-disorder"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "87c98b753eeab1454fa5e05081b7b805571d5c3995313deb19d0456e28ec9f98",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/schizophrenia"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "2a7b841fa34f314b7ab6e4e47a60ac15de281ed8c28b05ed3cff984bfc085a28",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-mental-health"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "2b13311fece05b3c3455d8170104ae7b52eb631dcb3bb8de2508d623dfbe1a99",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-of-older-adults"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "b1ff23a1da78dad698bda1a19956b34ce68b3a8d0e0d4adc3c107b47d97c2fed",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-at-work"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "5d3be0f39ed1a7a9436b9b3e92980834c585c4b57a4dc0e9efced81d64f70ce4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/suicide"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "ed415ec30224811f0152edbe1a87a5de874df7a6e5e487764de2430cb5f00f73",
+      "source": "https://www.who.int/zh/news-room/questions-and-answers/item/suicide"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "bcab7f524a5931830499561dbf860fcb10879a73017b76246a11253a7f10c3db",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/dementia"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "f45b7eb402bfb7253561376d1ec7d505e3f72fcbe63493746eb00aae4e3461ae",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/alcohol/"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "b4280c8e84e4dabe27bffe45a03043dd81c34a552cbceba3c03a5e8d02bbf608",
+      "source": "https://app.www.gov.cn/govdata/gov/202504/28/527934/article.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "2a6ff352e68f6b0adfc21d3a886fc48462fde28dc790695fcab21b9bf2b7040c",
+      "source": "https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "30c5f07fff540715bbe52c6722811dd180d5f8e52ac221d7105eab4d82b49417",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/post-traumatic-stress-disorder"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "8bc1978b448d3ac2617c4fdef9520ed206b3f4bbff1bd5925f4b6463e8b62118",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/autism-spectrum-disorders"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "4941f253821f7bf7820bebec2e795a241adc64e13654b77881060e0c3fff4e8a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/child-maltreatment"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "d7d04ad4c3a3fed991266c45dc5fb045dddd737fd2f3361f6cef14455c64d67e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-in-emergencies"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "f88b57ad85fad6c30a3db5036b76c50e106a7cbbd1a448998fb040195c209c5f",
+      "source": "https://www.gov.cn/lianbo/bumen/202503/content_7014409.htm"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "3e89445e3b17d7384da34c832f984b8c45a541d281cfc88cf4e3849622332cc0",
+      "source": "https://www.zlq.gov.cn/zlq/ztzl/jkzlqxd/2025061311220973449/index.shtml"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "3dec5a48500f7191029ea11221018448eb42b1f4bdb7b6785af0ce2d46681f3d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/violence-against-children"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "97ca088061c5e39396db859f0fd8d29738f34f7708896a89d3e601fc07e07b15",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/abuse-of-older-people"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "83dbbedff4c5ca02ebde36b2943e9aec9b4d5f5355570aa3d454fe066d0675b7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/corporal-punishment-and-health"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "ad5653ca6f248dd33042b1fb5f02766b957744c607bc0408fd6be33afc04a397",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/disability-and-health"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "910ec8caf5a0d55f851113a356c9a4f027405181fdd6bf3baaf786d79b61af75",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/gambling"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "ddf8b3850649de8c0c6a7a635e2cead51d8926118c9fb5894bf40d28d2c344f4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/health-literacy"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "e516410a4b4a0a195fe904ccb1daf7dc951de8a3d61d814e3b793998e81cb562",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/menopause"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "88eb139055e9bda83740e32575f68b451ea86a0771dc1b73368da5899b6ed626",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/physical-activity"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "c5962dab54b057f3d3c338fb2980edab7a18742bcab5814322e2be5cd28473ef",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/social-determinants-of-health"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "65e454b4b605a7f36b53e2d1f0e2c3f50cb9b3a8c9343d492fdf19c4cfcbdf69",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/violence-against-women"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "4d6f34a9cb63ccc86fbabea5406ca4a9d7f4829b81d73cf39552ffb5c1f9fd8a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/youth-violence"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "e39a7618bd8083a8673ff978b839d3d73d6b704efaa677d7a673acbf76a4c9f2",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-pregnancy"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "05da1c898ca194e62a175a019fcdb6eb5a6a1ee6e514ce5ec18bb74ce1d4c555",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescents-health-risks-and-solutions"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "0a83e36f1c7d3ba7dba94efcd7f5bc1b9595bbf21590596fffb8592f6e339d0e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/ageing-and-health"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "dead4e689455c3903f9ba3f33843443fb0620be1b7bc8c9b91e268403bba470b",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/assistive-technology"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "84cabc818b1cad02aa8c1ee67fceba5cc9152f6f2b7d764415d4216db7ff7c6b",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "59cd186df9cd30a9fe71595256d70d0f1f3fade2cb70f190ff5341438b56cd37",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/children-new-threats-to-health"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "6006e97d2fb99e17284dcf333bd520a3abb6bb0549cf0618f60997ffe6fee8d3",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/climate-change-and-health"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "526c8c8c04ee207d296cc9a32879caf9bd13645c5ce3ad29a702f6557f9b5b28",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/comprehensive-sexuality-education"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "ac8e9f11dc61bd9a84284461982806f1e98ffd38c555457dfb70a386698636ac",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/deafness-and-hearing-loss"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "3037682b8bb38d27bb67658fec12b73e40dd12000582ebb131388eafb4b8327d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/endometriosis"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "75694736fd9852b75c9ac47b343dcea0d2b18097c27fb4707874c1282df0c3ab",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/epilepsy"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "3d5a077b521e4e34e1a083f20faa4bd80b4af21093629fd63a1fc543ec406f01",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/family-planning-contraception"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "4a9acc4a86bd1b61e43a8bd3b81b5715ddf7bde049c7013136fe54fdf25cabf6",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/female-genital-mutilation"
+    },
+    {
+      "chunk_count": 22,
+      "document_id": "dfd0ec39b90a0f89f4007e5dedc586bf5aa1f37d03770760445a081fcd5976b5",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/gender"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "6888752269ce039e50cd5462732d138841a8d97b4ea2ee9302934f6c95a9753e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/headache-disorders"
+    },
+    {
+      "chunk_count": 14,
+      "document_id": "662df84c260e2165f670d8e982a5993ffd9b67e49c6b3950b4197e6d5413d56e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/healthy-diet"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "9fae8cd8562eb6e6b0935f88aebaac4be812163d60a811de713639187b651e4a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hiv-aids"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "c400597591e9bb00b38f95838818bb4026ea6335bd1f74833e464da97fea2ab5",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/human-rights-and-health"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "bc8b293e74ed40b1c7cd96aec55f703c2e18471573df6f17b342e9e08e2430e9",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/infertility"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "981f7a17140274c6396c0624643df28c1cf51f5d269f9f7e968caf5c019c94ff",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/low-back-pain"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "a2e09f4164ee9ee8d742a60f22954fe24ef27570a48e283e9525b0d97b68f5fd",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/menstrual-health"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "4a72d176d60f5cc2902fbdea7d0d47c3230303fcd3526059061f7f79966cba88",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/multiple-sclerosis"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "efdaf26256fa13c48141fcda5dfe22c6bdb316e84a4407e73dc5167972422073",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/obesity-and-overweight"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "035a153df0f7ebf730d090a8af8eb8572601c3309cab3386b8eb0ea250859c87",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/opioid-overdose"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "9a19e645c31119bb7cd7a2f621ea460c09776fff5203d1c8165542d873ecc6c6",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/palliative-care"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "83edbba868cc6e0b04e247f4fcd1013c2582df34de616c2dddaf72f118bf5802",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/parkinson-disease"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "00279f0a0094bd9741d1139c7967e982d75f20cff86b68423ca227989def9e55",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/polycystic-ovary-syndrome"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "003d044ad55d0d4e0d8b0b45c3a205516c36bdb63b06e65d138c6c530d0ab51a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/post-covid-19-condition-(long-covid)"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "c068bf943c93779824aace9476c27f94d31aa31bfdea734f998c0faab57ac318",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/primary-health-care"
+    },
+    {
+      "chunk_count": 12,
+      "document_id": "def6ff89a6e00f6b1274a2c34af160a7ce0b6f9c8a7d3ad204428c97fed70f74",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/refugee-and-migrant-health"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "d8c01f83e6da088260d3b3d560e17b3292641d26f67cd167fdb87931e7232274",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/refugee-and-migrant-mental-health"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "cdb0f91df3504c986c71662f8190e70a6e3ae542fcf6bd50c6504012c5840ee3",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/rehabilitation"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "5886e034f92549fccc7ac8e3e3038db758bd420b139b6602f0229746e07a5b96",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/self-care-health-interventions"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "bfdbe8fdb8f96cf384cd1f2a734b799bcc6d5d62c2353417f0a33d4bb1316987",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/stroke"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "2b2419c2807de98284a2ad5dc071d9b6654ff3f6bc7b7a60c36989d70dff52f0",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/tobacco"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "e7641413a2cf1683e0ba98b1e33faf53cced906a80c6666a5aad61e47217ee3f",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/urban-health"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "8c47955a0cebbb539e1b497a94ea70926e62fab62ed7c65647514793ddf0e43b",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/women-s-health"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "1617d1efdb05e79b722ae7e6e4cc20502861e4fc13cc373f3edacd0672b5f291",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/abortion"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "d1cf567c64fbbe17ff76aa929eb955d4d3c6736a2a21bb535505b8bee640b47c",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/asthma"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "d781baacb8ff6a3e74367b418c4da7622f9b30c84a99fd79e9d7df0d717e6d3a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/breast-cancer"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "d7c22e32285a6bf9c724616306f8ec034cfb2636abfdef529ac8b54b8960886d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/burns"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "ea191e1bcc1e3b3d6fc10ec61f381f320d1b74d909e9a2c25493d4f47fd5a6bc",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/cancer"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "972aa6daab08af81b15fa23df58685bec54e137ad9f45a2c3d6b1598321933a7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/cancer-in-children"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "e3b820bf1e31e9bcc6326a6b8c7cf855671dc05deaebca7a0f571163ec9ca6c4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "ed7c7e71ece352117c697dcb33b7053d2c36deb015fe9a7001ca6fb938f9bf7e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/cervical-cancer"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "807906c4dad4308bdce8a497ff01df2f7b0f817703977186c4f6e93c17fc3516",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/chronic-obstructive-pulmonary-disease-(copd)"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "163bc9c3cfbb87edd3c90e3cb32adbd3c2363a09b9ef862aec7fe82fa9065ac4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/coronavirus-disease-(covid-19)"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "14f045d8b1dea43211cde6dff041e9ed4ca5a0eb5e736fe3870e3f8f62532efb",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/diabetes"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "d4e7906bbc1ff173b101dab8af245591572b99cfd0b190b9bee643f2b36fb2de",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/drowning"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "edeb0b6997b8e3d4ca29aa04b77b895ae5e872f13f4ea1e1a733d1be312a146b",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/emergency-contraception"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "e57d6195f169edf6d6117dd1c9c3c1109d9fa23a8c89b9d2de1d05af5b6e85bc",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/falls"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "448aac6f721f983b6e8df9ea318310a3829dd24492a7a1870af95a6d05150cb8",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/infant-and-young-child-feeding"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "bc17f284822e257df4bba8c9168df7cffdf26767b8620834d83b472dc0cd5bc7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/malnutrition"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "1d2c2d76e083b273d9ee5e187e022c93aa0a13db6ded9fa7304bda022f67255f",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/maternal-mortality"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "519f2b53cebef1b88956c7a0d82ed605c90239bbd66fe8d6483cf57a6fabbab1",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/meningitis"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "51d668339ad6f486b5dab1b050263550e70383d6d3c1d60f5d140eee2e48ab0f",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/musculoskeletal-conditions"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "b7f772a45fd2f0e3477b7c68b536797727c98a2238001c03e257b9e2ecefdef7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/noncommunicable-diseases"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "24dd3f8ec30b15d37e61efa66ab2bba3f8a649b7b46704bc40def7d5fc4392e6",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/nursing-and-midwifery"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "0630359fbae9ced53366bdf59d5cfb3c4b186fcbe620f59e601ea6c05dd92cc5",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/oral-health"
+    },
+    {
+      "chunk_count": 20,
+      "document_id": "ac06e0016301892aa88a8116505b393f4d9598bd4432c0b523064fb1a3f8386a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/patient-safety"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "1d13488881acaee4f9a7c34e71fb651930cb332ae84d3d6dcebd7b2654d5f350",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/preterm-birth"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "86f819c65758b9d2ec5978fd093774f59b6d0d0d12f3531d923a17da8440809e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/quality-health-services"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "260635f8b750cdc66edd055acbbf138452e6e0f249f3170238168aaa13d034f8",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/road-traffic-injuries"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "e2ad1d2d61369b80bc652072171dbfb5081fd6ac22830b1f0aeffbde06198d9a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "cf8736d026143b553c2a704c3499fad301ed5b8598532fac2bbd3b0dd4add7e3",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/spinal-cord-injury"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "f4242361fec93efafdecd2fbbf5eb1d7ef166572c0219702ea58935f7852759e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/universal-health-coverage-(uhc)"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "98a6c8437da712204ec7ca2ef93c394b2e31800934bbae0d049d777c89778185",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/wildfires-and-health"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "3cd0c7929f730890903003b8ac0ff31739b644fe306b42937aab18ad89cde9fb",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/anaemia"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "78f82cc50ee5f983cc842b85f2263992b15811ba44606bab38ce7fe014bdfd29",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/climate-change-heat-and-health"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "afc3c1c4419f1d246c52eada9a7800c2699a7ccf80d78ab769c8a3d37d9db6a8",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/fragility-fractures"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "4375f53b602ae6a21c6ef6027ddc7838d2742b0780e56007aec94920246c7d0f",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hypertension"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "672ab78de90e970b45376a6cef5b7684c49a1e588218317841ab755114cbef71",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/kidney-disease"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "bbf7751766236f0c32deb98eb2500f51f852fa1d6d8657c1f0a09cf53ed51a4d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/newborn-mortality"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "43b38c0cbaa724b45188b532ae3b1f1b01dc4f211a9aa0760713f667ca05f1e8",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/osteoarthritis"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "f6c1abfcf1f9d027d0565119181e46f3ffee28cb5fd795e8e08d431a76ada947",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/pre-eclampsia"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "25351ec75d3cd8c8d1ecd87e01ed06c35b3cb0a27506529eb921b91e65312271",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/rheumatoid-arthritis"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "f0c65b43683d95e5d36ff084e33765f6b8f1aed879b3e5cfaf08fb81d638cf08",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/sickle-cell-disease"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "5efbb85a3fee9bed0536087c8b8cf4e4bb7749f0952313fa42fbdd1c082cd254",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "2527d37202db775e0270510210ce13ce86fce2e2f9a0d544ad0b4b077f40488a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/birth-defects"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "56f91fec3568b3a03844ea668566561940d5d618fc2b9d984ac9d6d593920a3b",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/child-mortality-under-5-years"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "e5ffebdacff132565a977b681fd89a28c5d30caa400217dca9a772c3f583010f",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/community-based-health-insurance-CBHI"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "d7192c4670a80ca5c5b00d2afeb3ce15660c793a316a7bce6325160ebbb16a77",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/condoms"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "aa0086bc6ee718949e5de5a8a9e994fae1e249176bc0fd055cb292295041907e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/electronic-waste-(e-waste)"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "60c64c1458fdb42505d18ef5ed4149a5b54f1e31218a9c12b661a9be05668d26",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/heart-attack"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "ef69d0ef47c08eaab34150ef0fa64bce32cba45a36cd2e9d849abbc887d50c6a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hepatitis-b"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "2bb35b764d6ecd560cc3ae683b4d319348c4418e842b97686e162529f86330b3",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hepatitis-c"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "34fce8acb56ab571db7fff9201011f5b67834ae173bbdbe632b8a6876606be8a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/herpes-simplex-virus"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "a778d42f947d3ce58005074a9f3f574a105579323f5afcc13dc2bd9d64e71586",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "fe51b9f5ad87211b6c03b54fbd62edba04d5622573cdf39e88ab9b0943e19655",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/household-air-pollution-and-health"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "bdd20825279eb84388bb140a30ec0131b67853f2ec45145cabc25556dae6381b",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/immunization-coverage"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "3747e0560ffbe23bb0e5163c13082ffdc7e1ee55dead9ed16961aa7761c0b01a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/lead-poisoning-and-health"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "81f7043d479b0eff49260b18c616ba35c0606501f28c1f60b05c6f5161eefe6d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/lung-cancer"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "5f043cc3f18044d6a9c3e7e83876754d5ffd5c173c2ecb7d4c0b5b4ff8b437d9",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mercury-and-health"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "9312c50218d4eed922d6441daf8875ab5e5137abdade30c92b4c1e929c833fda",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/oral-contraceptives"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "f0abb01b514c3f44bc3dd95e30a830baf55870fe1b170a0a6a9f969d5cdae701",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/rubella"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "56eae171b90c9e3556a815f5be623f435728657e7a86e8224bb858ac50128cc8",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/shingles-(herpes-zoster)"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "95d0262e72a3f18f91a20f82818dc64dd9129ad4bc42d9d7ed5df33e6e5d83b4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/sodium-reduction"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "7ff0b19eef6cbbf4eee8d01266c6478a0ad4de87cd8791ce1c39a6798be8e6f0",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/sugars-and-dental-caries"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "da3f96026b9bf59b29fa04d04c8ae5cdceefd45fc5338e3b3f0bc911e7a6cb4d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/syphilis"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "19e3bc203fb3280dbd8299f91a4024b91180106303db36ec984760f1c2dff988",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/the-top-10-causes-of-death"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "38fb5ea20e28344c41de0e8cfff38074d38d1fe6e48e49a5c60d651d0cfdc5e7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/trans-fat"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "7991fe03b79735595716a30fab414fcd823b0cda13081f79c29c18b800efd963",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/tuberculosis"
+    }
+  ],
+  "generated_at_utc": "2026-10-28T12:45:29+00:00",
+  "input_path": "data/processed/corpus_v7.jsonl",
+  "input_sha256": "08d231194ce48859cf13e01aab703348e198a502e63de8f3c27f056806200fc2",
+  "output_path": "data/processed/chunks_v7.jsonl",
+  "output_sha256": "d1ce483fde30de163c710a2501b04bedce9532e39c2489c0b0c60f68f093d388",
+  "results": {
+    "all_chunk_ids_unique": true,
+    "chunk_count": 1016,
+    "input_count": 135,
+    "max_chunk_chars": 499,
+    "max_chunks_per_document": 22,
+    "min_chunk_chars": 85,
+    "min_chunks_per_document": 2
+  },
+  "schema_version": "1"
+}

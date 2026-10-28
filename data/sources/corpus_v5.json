@@ -1,0 +1,579 @@
+{
+  "corpus_id": "mental_health_zh_v5",
+  "base_catalog": "corpus_v4.json",
+  "purpose": "补充与心理健康问答相关的疾病负担、生活质量、污名、创伤、照护和服务可及性背景资料。",
+  "language": "zh-CN",
+  "selection_policy": "背景性资料必须来自 WHO 中文事实清单、可稳定解析且通过顺序语义锚点校验；检索阶段应与核心心理健康主题分层。",
+  "sources": [
+    {
+      "source_id": "who_abortion",
+      "title": "流产",
+      "publisher": "世界卫生组织",
+      "topic": "生殖健康、决策与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/abortion",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "十分之六的意外怀孕以人工流产告终。",
+        "堕胎是一种常见的健康干预措施。使用世界卫生组织推荐的适合怀孕时间的方法并由具有必要技能的人进行人工流产是非常安全的。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_asthma",
+      "title": "哮喘",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病自我管理与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/asthma",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "哮喘是一种影响儿童和成人的主要非传染性疾病，是最常见的儿童慢性病。",
+        "肺部小气道炎症和变窄会导致哮喘症状，例如咳嗽、喘鸣、呼吸短促和胸闷等症状或任何这类综合症状。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_breast_cancer",
+      "title": "乳腺癌",
+      "publisher": "世界卫生组织",
+      "topic": "癌症与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/breast-cancer",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2024年，乳腺癌估计在全球造成69.4万人死亡。同年，在186个国家中，乳腺癌是164个国家妇女中最常见的癌症。",
+        "约有80%的乳腺癌发生在除了性别和年龄之外没有特定危险因素的妇女当中。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_burns",
+      "title": "烧伤",
+      "publisher": "世界卫生组织",
+      "topic": "创伤、康复与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/burns",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "要事实",
+        "据估计，每年有18万人死于烧伤。绝大多数发生在低收入和中等收入国家。",
+        "非致命烧伤是一项主要致病因素。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_cancer",
+      "title": "癌症",
+      "publisher": "世界卫生组织",
+      "topic": "严重疾病与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/cancer",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "癌症是全世界的一个主要死因，2024年近1000万例（或近六分之一）死亡由癌症导致。",
+        "最常见的癌症是肺癌、乳腺癌、结肠癌、直肠癌以及前列腺癌。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_cancer_in_children",
+      "title": "儿童癌症",
+      "publisher": "世界卫生组织",
+      "topic": "患儿家庭与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/cancer-in-children",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "每年估计有40万名0-19岁儿童和青少年罹患癌症(1)。",
+        "影响儿童的最常见癌症类型包括白血病、脑癌和实体瘤，如神经母细胞瘤和肾母细胞瘤；淋巴瘤、骨癌和甲状腺癌在青少年时期更为常见。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_cardiovascular_diseases_cvds",
+      "title": "心血管疾病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病预防与生活方式",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "心血管疾病（CVD）是全球死亡的主要原因。",
+        "2022年，估计有1980万人死于心血管疾病，约占全球死亡总人数的32%。其中，85%的人死于心脏病和中风。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_cervical_cancer",
+      "title": "宫颈癌",
+      "publisher": "世界卫生组织",
+      "topic": "女性健康与心理社会支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/cervical-cancer",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "宫颈癌在很大程度上可按照国家指南建议，通过人乳头状瘤病毒疫苗接种和定期筛查得到预防，且如果早期发现并及时治疗，宫颈癌可以治愈。",
+        "宫颈癌是全球妇女第五大最常诊断的癌症，估计2024年约有60.4万例新发病例和大约28万例死亡。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_chronic_obstructive_pulmonary_disease_copd",
+      "title": "慢性阻塞性肺病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/chronic-obstructive-pulmonary-disease-(copd)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "慢性阻塞性肺病是全球第三大死因，2023年造成400万人死亡，约占全球死亡总数的6%。",
+        "70岁以下人群中近90%的慢性阻塞性肺病死亡发生在低收入和中等收入国家。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_coronavirus_disease_covid_19",
+      "title": "冠状病毒病",
+      "publisher": "世界卫生组织",
+      "topic": "公共卫生事件与身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/coronavirus-disease-(covid-19)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "COVID-19是由SARS-CoV-2冠状病毒引起的一种疾病。虽然有一系列体征和症状，但当前流行变异株最常见的报告症状是发烧、发冷和咽痛。",
+        "大多数人无需治疗即可完全康复。重症患者或有重症风险的患者应尽快就医。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_diabetes",
+      "title": "糖尿病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病自我管理与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/diabetes",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "糖尿病患者人数从1990年的2亿上升至2022年的8.3亿。低收入和中等收入国家的患病率上升速度高于高收入国家。",
+        "2022年，半数以上糖尿病患者没有服用治疗糖尿病的药物。低收入和中等收入国家的糖尿病治疗覆盖率最低。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_drowning",
+      "title": "溺水",
+      "publisher": "世界卫生组织",
+      "topic": "儿童与青少年伤害预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/drowning",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "世界各地每年溺水死亡总数估计为30万例。",
+        "溺水对儿童和青年的影响尤为严重。5岁以下儿童占所有溺水死亡人数的近四分之一。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_emergency_contraception",
+      "title": "紧急避孕",
+      "publisher": "世界卫生组织",
+      "topic": "生殖健康与自主决策",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/emergency-contraception",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "何谓紧急避孕？",
+        "紧急避孕指可用于防止性交后怀孕的避孕方法。按建议这些方法可在5天内使用，但性交行为之后越快使用它们越有效。",
+        "作用方式"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_falls",
+      "title": "跌倒",
+      "publisher": "世界卫生组织",
+      "topic": "老年健康、独立生活与预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/falls",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "问题",
+        "什么人有危险？",
+        "每个跌倒的人都有可能受伤，但因个人年龄、性别和健康状况的不同，受伤的类型和严重程度会有差异。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_infant_and_young_child_feeding",
+      "title": "婴幼儿喂养",
+      "publisher": "世界卫生组织",
+      "topic": "早期发展与照护者支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "根据《儿童权利公约》，每个婴儿和儿童都有获得良好营养的权利。",
+        "据估计，2024年有1.5亿5岁以下儿童发育迟缓（身高低于同龄儿童），4300万儿童消瘦（身高低于同龄儿童），3600万儿童超重。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_malnutrition",
+      "title": "营养不良",
+      "publisher": "世界卫生组织",
+      "topic": "营养、发展与身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/malnutrition",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "各种形式的营养不良包括营养不足（消瘦、发育迟缓、体重不足）、维生素或矿物质缺乏、超重、肥胖以及由此导致的饮食相关非传染性疾病。",
+        "2022年，有25亿成年人超重，其中8.9亿人患有肥胖症，而同时有3.9亿人体重不足。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_maternal_mortality",
+      "title": "孕产妇死亡",
+      "publisher": "世界卫生组织",
+      "topic": "孕产妇健康与服务可及性",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/maternal-mortality",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2023年，每天有700多名妇女死于与怀孕和分娩有关的可预防原因。",
+        "2023年，几乎每两分钟就有一例孕产妇死亡。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_meningitis",
+      "title": "脑膜炎",
+      "publisher": "世界卫生组织",
+      "topic": "神经系统健康与康复支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/meningitis",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "脑膜炎是一种毁灭性的疾病，可能是致命的，往往会导致严重的长期健康问题。",
+        "脑膜炎仍然是一个重大的全球公共卫生挑战。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_musculoskeletal_conditions",
+      "title": "肌肉骨骼疾患",
+      "publisher": "世界卫生组织",
+      "topic": "慢性疼痛、功能与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/musculoskeletal-conditions",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "全球约有17.1亿人患有肌肉骨骼疾病。",
+        "在肌肉骨骼疾病中，腰痛造成的负担最重，共有5.68亿人患病。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_noncommunicable_diseases",
+      "title": "非传染性疾病",
+      "publisher": "世界卫生组织",
+      "topic": "慢性病危险因素与综合预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/noncommunicable-diseases",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2021年，非传染性疾病导致至少4300万人死亡，相当于全球非大流行相关死亡的75%。",
+        "2021年，有1800万人在70岁之前死于非传染性疾病。在这些过早死亡中，82%发生在低收入和中等收入国家。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_nursing_and_midwifery",
+      "title": "护理和助产",
+      "publisher": "世界卫生组织",
+      "topic": "健康服务与专业支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/nursing-and-midwifery",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2023年，全球估计有2980万名护士，高于2018年的2790万名。护士是卫生人员队伍中规模最大的职业群体。",
+        "世界上约78%的护士在仅占世界人口49%的国家工作。高收入国家拥有世界17%的人口，但护士却占世界的46%。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_oral_health",
+      "title": "口腔健康",
+      "publisher": "世界卫生组织",
+      "topic": "自我照护与生活质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/oral-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "口腔疾病虽然在很大程度上可以预防，但却给许多国家带来巨大健康负担，并影响人们的一生，导致疼痛、不适、毁容甚至死亡。",
+        "据估计，口腔疾病影响到近37亿人。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_patient_safety",
+      "title": "患者安全",
+      "publisher": "世界卫生组织",
+      "topic": "就医安全与健康服务质量",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/patient-safety",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "超过50%的伤害（每20名患者中有1名）可以预防；这种伤害有一半的原因在于药物(2,3)。",
+        "有估计表明，多达40%的患者在初级和门诊保健机构受到伤害，而高达80%（23.6-85%）的伤害可以避免(4)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_preterm_birth",
+      "title": "早产",
+      "publisher": "世界卫生组织",
+      "topic": "早期发展与家庭支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/preterm-birth",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2020年估计有1340万婴儿早产（在完成37周妊娠之前）(1)。",
+        "早产并发症是五岁以下儿童的主要死亡原因，2019年导致了大约90万例死亡(2)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_quality_health_services",
+      "title": "优质卫生服务",
+      "publisher": "世界卫生组织",
+      "topic": "健康服务质量与以人为本照护",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/quality-health-services",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "在低收入和中等收入国家，每年有570万至840万人死亡归因于医疗质量差，占比可高达这些国家总死亡人数的15%(1)。",
+        "在低收入和中等收入国家，60%因需要医疗保健的情况而发生的死亡是由于医疗质量差，而其余死亡由未就医造成(2)。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_road_traffic_injuries",
+      "title": "道路交通伤害",
+      "publisher": "世界卫生组织",
+      "topic": "创伤预防与康复支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/road-traffic-injuries",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "每年约有116万人死于道路交通事故。",
+        "道路交通伤害是5-29岁儿童和年轻人的主要死因。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_sexually_transmitted_infections_stis",
+      "title": "性传播感染",
+      "publisher": "世界卫生组织",
+      "topic": "性健康、污名与求助",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "全世界每天有超过100万15至49岁年龄段的人获得可治愈的性传播感染，其中大多数感染者没有症状。",
+        "2020年，估计有3.74亿15至49岁年龄段的人新感染以下四种可治愈的性传播感染中的一种：衣原体、淋病、梅毒和滴虫病。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_spinal_cord_injury",
+      "title": "脊髓损伤",
+      "publisher": "世界卫生组织",
+      "topic": "残障、康复与社会参与",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/spinal-cord-injury",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "全球超过1500万人存在脊髓损伤。",
+        "大多数脊髓损伤病例由创伤造成，包括跌倒，道路交通伤害或暴力。因此，脊髓损伤可以预防。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_universal_health_coverage_uhc",
+      "title": "全民健康覆盖",
+      "publisher": "世界卫生组织",
+      "topic": "健康服务可及性与公平",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/universal-health-coverage-(uhc)",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "2000年至2023年期间，无法获得基本卫生服务的人口比例下降了约20%，也就是说，2023年约有46亿人未得到充分覆盖。",
+        "自2015年以来，世卫组织所有区域在服务覆盖方面都取得了进展，其中一半区域（非洲、东南亚和西太平洋）的财务困难也有所缓解。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_wildfires_and_health",
+      "title": "野火与健康",
+      "publisher": "世界卫生组织",
+      "topic": "灾害、应急与身心健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/wildfires-and-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "由于气候变化，全球野火发生的频率和严重程度均在增加。",
+        "野火事件正日益威胁到生命和生态系统，不仅摧毁森林及居民家园，还会造成广泛影响，特别是烟雾污染。烟雾污染可跨越区域甚至国界传播。"
+      ],
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    }
+  ]
+}

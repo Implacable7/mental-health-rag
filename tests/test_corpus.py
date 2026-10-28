@@ -1,4 +1,5 @@
 import json
+import urllib.error
 from pathlib import Path
 from typing import Any
 
@@ -47,15 +48,33 @@ def test_v2_catalog_inherits_v1_and_adds_reviewed_sources() -> None:
     corpus_id, sources = corpus.load_source_catalog("data/sources/corpus_v2.json")
 
     assert corpus_id == "mental_health_zh_v2"
-    assert len(sources) == 22
-    assert [source.source_id for source in sources[-6:]] == [
+    assert len(sources) == 23
+    assert [source.source_id for source in sources[-7:]] == [
         "who_ptsd",
         "who_autism",
         "who_child_maltreatment",
         "who_mental_health_emergencies",
         "gov_sleep_health_core_information",
         "gov_depression_signs_not_diagnosis",
+        "who_violence_against_children",
     ]
+    assert len({source.source_id for source in sources}) == len(sources)
+    assert len({source.url for source in sources}) == len(sources)
+
+
+def test_v3_catalog_adds_governed_authoritative_sources() -> None:
+    corpus_id, sources = corpus.load_source_catalog("data/sources/corpus_v3.json")
+
+    assert corpus_id == "mental_health_zh_v3"
+    assert len(sources) == 33
+    additions = sources[-10:]
+    assert all(source.authority_tier == "A" for source in additions)
+    assert all(source.content_layer == "public_education" for source in additions)
+    assert {source.risk_level for source in additions} == {
+        "standard",
+        "sensitive",
+        "high",
+    }
     assert len({source.source_id for source in sources}) == len(sources)
     assert len({source.url for source in sources}) == len(sources)
 
@@ -98,6 +117,46 @@ def test_catalog_rejects_unapproved_host(tmp_path: Path) -> None:
     _write_catalog(catalog_path, [_source(url="https://example.com/article")])
 
     with pytest.raises(ValueError, match="approved HTTPS host"):
+        corpus.load_source_catalog(catalog_path)
+
+
+def test_catalog_accepts_source_governance_metadata(tmp_path: Path) -> None:
+    catalog_path = tmp_path / "sources.json"
+    _write_catalog(
+        catalog_path,
+        [
+            _source(
+                authority_tier="A",
+                audience="caregiver",
+                content_layer="public_education",
+                risk_level="sensitive",
+            )
+        ],
+    )
+
+    _, sources = corpus.load_source_catalog(catalog_path)
+
+    assert sources[0].authority_tier == "A"
+    assert sources[0].audience == "caregiver"
+    assert sources[0].risk_level == "sensitive"
+
+
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [
+        ("authority_tier", "D"),
+        ("audience", "everyone"),
+        ("content_layer", "clinical"),
+        ("risk_level", "unknown"),
+    ],
+)
+def test_catalog_rejects_invalid_source_governance_metadata(
+    tmp_path: Path, field: str, value: str
+) -> None:
+    catalog_path = tmp_path / "sources.json"
+    _write_catalog(catalog_path, [_source(**{field: value})])
+
+    with pytest.raises(ValueError, match=field):
         corpus.load_source_catalog(catalog_path)
 
 
@@ -191,6 +250,37 @@ def test_semantic_verification_rejects_missing_or_reordered_phrases() -> None:
         )
 
 
+def test_download_retries_transient_network_errors(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    attempts = 0
+
+    class Response:
+        def __enter__(self) -> "Response":
+            return self
+
+        def __exit__(self, *_args: object) -> None:
+            return None
+
+        def read(self, _size: int) -> bytes:
+            return b"official content"
+
+    def flaky_urlopen(*_args: object, **_kwargs: object) -> Response:
+        nonlocal attempts
+        attempts += 1
+        if attempts < 3:
+            raise urllib.error.URLError("temporary TLS failure")
+        return Response()
+
+    monkeypatch.setattr("urllib.request.urlopen", flaky_urlopen)
+    monkeypatch.setattr("time.sleep", lambda _seconds: None)
+
+    content = corpus._download("https://www.who.int/zh/example", 5, 1024)
+
+    assert content == b"official content"
+    assert attempts == 3
+
+
 def test_prepare_corpus_writes_cleaned_jsonl_and_audit_report(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -217,7 +307,58 @@ def test_prepare_corpus_writes_cleaned_jsonl_and_audit_report(
     record = json.loads((tmp_path / "processed.jsonl").read_text(encoding="utf-8"))
     assert record["metadata"]["source_id"] == "who_example"
     assert record["metadata"]["cleaning_version"] == "1"
+    assert record["metadata"]["authority_tier"] == "legacy_reviewed"
+    assert record["metadata"]["content_layer"] == "public_education"
     report = json.loads((tmp_path / "report.json").read_text(encoding="utf-8"))
     assert report["sources"][0]["cleaned_chars"] == len(record["page_content"])
     assert report["semantic_verification"]["required_phrase_count"] == 3
+
+
+def test_prepare_corpus_saves_progress_and_isolates_failed_source(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    catalog_path = tmp_path / "sources.json"
+    _write_catalog(
+        catalog_path,
+        [
+            _source(),
+            _source(
+                source_id="who_unavailable",
+                url="https://www.who.int/zh/unavailable",
+            ),
+        ],
+    )
+    repeated_text = "心理健康示例重要事实寻求专业帮助" * 50
+    raw_html = (
+        '<article class="sf-detail-body-wrapper"><p>'
+        + repeated_text
+        + "</p></article>"
+    ).encode()
+
+    def download(url: str, *_args: object) -> bytes:
+        if url.endswith("unavailable"):
+            raise urllib.error.URLError("temporary failure")
+        return raw_html
+
+    monkeypatch.setattr(corpus, "_download", download)
+    progress_path = tmp_path / "progress.json"
+
+    result = corpus.prepare_corpus(
+        catalog_path,
+        tmp_path / "raw",
+        tmp_path / "processed.jsonl",
+        tmp_path / "report.json",
+        continue_on_error=True,
+        progress_path=progress_path,
+    )
+
+    progress = json.loads(progress_path.read_text(encoding="utf-8"))
+    report = json.loads((tmp_path / "report.json").read_text(encoding="utf-8"))
+    assert result.unique_count == 1
+    assert progress["validated_source_ids"] == ["who_example"]
+    assert progress["pending_source_ids"] == []
+    assert progress["failed_sources"][0]["source_id"] == "who_unavailable"
+    assert report["catalog_source_count"] == 2
+    assert report["successful_source_count"] == 1
+    assert report["failed_source_count"] == 1
     assert report["safety_term_counts"]["求助"] == 0
