@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-27",
+  "status": "configuration_validated_model_download_pending",
+  "environment": {
+    "torch": "2.5.0",
+    "sentence_transformers": "5.7.0",
+    "transformers": "5.0.0",
+    "faiss": "1.15.1",
+    "cuda_available": true,
+    "cuda_device_count": 1
+  },
+  "candidate_model": {
+    "model_name": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "license": "MIT",
+    "language": "Chinese",
+    "expected_embedding_dimension": 512,
+    "query_instruction": "为这个句子生成表示以用于检索相关文章：",
+    "normalize_embeddings": true,
+    "cached_locally": false,
+    "download_performed": false
+  },
+  "validation": {
+    "configuration_tests_passed": 13,
+    "real_model_loaded": false,
+    "real_vectors_generated": false,
+    "retrieval_quality_evaluated": false
+  }
+}

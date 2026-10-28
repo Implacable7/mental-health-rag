@@ -1,0 +1,75 @@
+{
+  "corpus_id": "mental_health_zh_v2",
+  "base_catalog": "corpus_v1.json",
+  "purpose": "在 v1 权威中文语料基础上补充创伤、神经发育和儿童保护主题",
+  "language": "zh-CN",
+  "selection_policy": "仅将已通过官方来源、中文原文、可访问性、正文结构和语义锚点核验的资料加入正式清单；暂不纳入抓取受阻、近重复、需自行翻译或偏临床处方的资料。",
+  "sources": [
+    {
+      "source_id": "who_ptsd",
+      "title": "创伤后应激障碍",
+      "publisher": "世界卫生组织",
+      "topic": "创伤与创伤后应激",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/post-traumatic-stress-disorder",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["重要事实", "症状和模式", "自我护理"]
+    },
+    {
+      "source_id": "who_autism",
+      "title": "自闭症",
+      "publisher": "世界卫生组织",
+      "topic": "神经发育与支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/autism-spectrum-disorders",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["重要事实", "评估和照护", "人权"]
+    },
+    {
+      "source_id": "who_child_maltreatment",
+      "title": "虐待儿童",
+      "publisher": "世界卫生组织",
+      "topic": "儿童保护与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/child-maltreatment",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["重要事实", "虐待的后果", "预防"]
+    },
+    {
+      "source_id": "who_mental_health_emergencies",
+      "title": "紧急情况下的精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "突发事件心理健康与社会心理支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-in-emergencies",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": ["重要事实", "建议采取的行动", "心理急救"]
+    },
+    {
+      "source_id": "gov_sleep_health_core_information",
+      "title": "睡眠健康核心信息及释义",
+      "publisher": "全国爱国卫生运动委员会办公室",
+      "topic": "睡眠健康与心理健康",
+      "source_type": "html",
+      "extractor": "gov_trs",
+      "url": "https://www.gov.cn/lianbo/bumen/202503/content_7014409.htm",
+      "license_note": "中国政府网转载国家卫生健康委公开科普材料；本项目保留发布机关和原始 URL，仅用于学习和研究。",
+      "required_phrases": ["睡眠可消除疲劳", "长期睡眠不良", "寻求专业帮助"]
+    },
+    {
+      "source_id": "gov_depression_signs_not_diagnosis",
+      "title": "出现抑郁表现，就是得了抑郁症吗",
+      "publisher": "正蓝旗人民政府转载健康中国行动",
+      "topic": "抑郁情绪、抑郁症状与抑郁症的区别",
+      "source_type": "html",
+      "extractor": "gov_doc_content",
+      "url": "https://www.zlq.gov.cn/zlq/ztzl/jkzlqxd/2025061311220973449/index.shtml",
+      "license_note": "政府网站转载健康中国行动科普材料；作者为国家健康科普专家库成员，本项目保留发布机构、作者和原始 URL，仅用于学习和研究。",
+      "required_phrases": ["出现抑郁情绪、抑郁症状并不等同于患抑郁症", "什么是抑郁症状", "请及时到正规医院精神科就诊"]
+    }
+  ]
+}

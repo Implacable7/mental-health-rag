@@ -1,0 +1,142 @@
+{
+  "audit_id": "corpus_v2_source_audit_2026_10_27",
+  "catalog": "data/sources/corpus_v2.json",
+  "decision_rule": "只有官方来源、中文原文、稳定可访问、正文可完整解析、语义锚点按顺序保留且适用范围符合公众科普定位的资料，才进入正式语料清单。",
+  "summary": {
+    "inherited_sources": 16,
+    "accepted_additions": 6,
+    "formal_catalog_sources": 22,
+    "deferred_candidates": 7,
+    "excluded_candidates": 3
+  },
+  "accepted": [
+    {
+      "source_id": "who_ptsd",
+      "title": "创伤后应激障碍",
+      "publisher": "世界卫生组织",
+      "extracted_chars": 3196,
+      "verified_phrase_count": 3,
+      "decision": "accepted"
+    },
+    {
+      "source_id": "who_autism",
+      "title": "自闭症",
+      "publisher": "世界卫生组织",
+      "extracted_chars": 3293,
+      "verified_phrase_count": 3,
+      "decision": "accepted"
+    },
+    {
+      "source_id": "who_child_maltreatment",
+      "title": "虐待儿童",
+      "publisher": "世界卫生组织",
+      "extracted_chars": 2692,
+      "verified_phrase_count": 3,
+      "decision": "accepted"
+    },
+    {
+      "source_id": "who_mental_health_emergencies",
+      "title": "紧急情况下的精神卫生",
+      "publisher": "世界卫生组织",
+      "extracted_chars": 2940,
+      "verified_phrase_count": 3,
+      "decision": "accepted"
+    },
+    {
+      "source_id": "gov_sleep_health_core_information",
+      "title": "睡眠健康核心信息及释义",
+      "publisher": "全国爱国卫生运动委员会办公室",
+      "extracted_chars": 2825,
+      "verified_phrase_count": 3,
+      "decision": "accepted"
+    },
+    {
+      "source_id": "gov_depression_signs_not_diagnosis",
+      "title": "出现抑郁表现，就是得了抑郁症吗",
+      "publisher": "正蓝旗人民政府转载健康中国行动",
+      "author_credential": "国家健康科普专家库成员、北京大学第六医院临床心理中心暨临床心理科主任",
+      "extracted_chars": 894,
+      "verified_phrase_count": 3,
+      "decision": "accepted",
+      "quality_note": "区分抑郁情绪、抑郁症状和抑郁症，并明确建议由正规医疗机构评估；正文末尾页面控件经空元素解析修复后已排除。"
+    }
+  ],
+  "deferred": [
+    {
+      "title": "中华人民共和国精神卫生法",
+      "publisher": "国家卫生健康委员会或国家法律法规数据库",
+      "source_class": "law",
+      "decision": "deferred",
+      "reason": "官方正文和2018年修正状态已交叉核对，但国家卫生健康委页面对构建客户端返回HTTP 412；替代官方页面仍需完成稳定抓取和全文首尾核验。"
+    },
+    {
+      "title": "压力之下，择要事为之",
+      "publisher": "世界卫生组织",
+      "source_class": "public_self_help_guide",
+      "decision": "deferred",
+      "official_bitstream_bytes": 3921820,
+      "pdf_pages": 133,
+      "pypdf_extracted_chars": 27028,
+      "license": "CC BY-NC-SA 3.0 IGO",
+      "reason": "已定位WHO IRIS官方API文件，但插图式排版导致抽取文本存在断句、阅读顺序和空格异常，需要专用解析与逐块核验。"
+    },
+    {
+      "title": "现场工作者心理急救指南",
+      "publisher": "世界卫生组织",
+      "source_class": "crisis_support_guide",
+      "decision": "deferred",
+      "official_bitstream_bytes": 1928727,
+      "pdf_pages": 68,
+      "pypdf_extracted_chars": 41729,
+      "reason": "已定位WHO IRIS官方API文件，但版面抽取存在断句、空格和页面元素混排，需要专用解析与逐块核验。"
+    },
+    {
+      "title": "难民和移民心理健康",
+      "publisher": "世界卫生组织",
+      "source_class": "population_specific_public_education",
+      "decision": "deferred",
+      "extracted_chars": 2529,
+      "reason": "官方中文正文和语义锚点均通过技术核验，但当前项目优先补齐一般公众高频心理健康科普；该主题保留在候选池，待核心主题覆盖充分后再纳入。"
+    },
+    {
+      "title": "儿童心理健康支持系列",
+      "publisher": "联合国儿童基金会",
+      "source_class": "caregiver_guidance",
+      "decision": "deferred",
+      "reason": "中文内容和发布机构通过初审，但当前构建客户端返回HTTP 403，尚未完成页面解析和语义锚点验证。"
+    },
+    {
+      "title": "中小学生心理健康工作十条措施答记者问",
+      "publisher": "中华人民共和国教育部",
+      "source_class": "education_policy",
+      "decision": "deferred",
+      "reason": "官方政策来源通过初审，但当前构建客户端连接超时，尚未完成可复现抓取。"
+    },
+    {
+      "title": "健康中国行动（2019—2030年）心理健康促进行动",
+      "publisher": "国家卫生健康委员会",
+      "source_class": "national_health_policy",
+      "decision": "deferred",
+      "reason": "原页面包含多个健康专项，需实现章节级抽取，只保留心理健康促进行动并防止无关内容进入语料。"
+    }
+  ],
+  "excluded": [
+    {
+      "title": "精神障碍诊疗规范（2020年版）",
+      "publisher": "国家卫生健康委员会",
+      "decision": "excluded_from_public_corpus",
+      "reason": "面向医务人员且包含诊断治疗细节；可登记为独立专业参考候选，不能与公众科普资料无差别混检。"
+    },
+    {
+      "title": "DSM及商业心理健康教材全文",
+      "decision": "excluded",
+      "reason": "商业版权或授权边界不允许将未经许可的全文抓取为项目语料；盗版或来源不明副本一律排除。"
+    },
+    {
+      "title": "什么情况下要去专业的精神专科医院就诊",
+      "publisher": "福建省卫生健康委员会医政处",
+      "decision": "excluded_from_current_public_corpus",
+      "reason": "页面权威且可稳定抽取，但正文把多类已确诊疾病概括为需要长期精神类药物，容易脱离个体评估语境被过度泛化；当前不作为公众问答证据。"
+    }
+  ]
+}

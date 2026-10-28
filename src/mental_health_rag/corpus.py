@@ -22,11 +22,39 @@ from pypdf import PdfReader
 from mental_health_rag.cleaning import clean_document
 from mental_health_rag.deduplication import deduplicate_documents
 
-_ALLOWED_HOSTS = {"www.who.int", "www.nhc.gov.cn", "www.gov.cn", "app.www.gov.cn"}
+_ALLOWED_HOSTS = {
+    "www.who.int",
+    "www.nhc.gov.cn",
+    "www.gov.cn",
+    "app.www.gov.cn",
+    "www.zlq.gov.cn",
+}
 _SOURCE_TYPES = {"html", "pdf"}
-_EXTRACTORS = {"who_article", "who_qa", "gov_article", "gov_trs", "pdf_text"}
+_EXTRACTORS = {
+    "who_article",
+    "who_qa",
+    "gov_article",
+    "gov_trs",
+    "gov_doc_content",
+    "pdf_text",
+}
 _BLOCK_TAGS = {"br", "div", "h1", "h2", "h3", "h4", "li", "p", "section"}
 _IGNORED_TAGS = {"script", "style", "noscript", "svg"}
+_VOID_TAGS = {
+    "area",
+    "base",
+    "br",
+    "col",
+    "embed",
+    "hr",
+    "img",
+    "input",
+    "link",
+    "meta",
+    "source",
+    "track",
+    "wbr",
+}
 _CJK_CHARACTER = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 _MULTIPLE_SPACES = re.compile(r"[ \t\u00a0\u3000]+")
 _MULTIPLE_NEWLINES = re.compile(r"\n{3,}")
@@ -103,6 +131,11 @@ class _ArticleTextParser(HTMLParser):
         if self.capture_depth == 0:
             return
 
+        if tag in _VOID_TAGS:
+            if not self.ignored_depth and tag in _BLOCK_TAGS:
+                self.parts.append("\n")
+            return
+
         self.capture_depth += 1
         if self.ignored_depth:
             self.ignored_depth += 1
@@ -146,12 +179,25 @@ class _ArticleTextParser(HTMLParser):
             return tag == "div" and (
                 "TRS_Editor" in classes or "pages_content" in classes
             )
+        if self.extractor == "gov_doc_content":
+            return tag == "div" and attrs.get("id") == "docContent"
         return False
 
 
 def load_source_catalog(path: str | Path) -> tuple[str, tuple[CorpusSource, ...]]:
-    """Load and validate a JSON source catalog."""
-    catalog_path = Path(path)
+    """Load and validate a JSON source catalog, including an optional base catalog."""
+    return _load_source_catalog(Path(path), seen_paths=set())
+
+
+def _load_source_catalog(
+    catalog_path: Path, *, seen_paths: set[Path]
+) -> tuple[str, tuple[CorpusSource, ...]]:
+    """Resolve one catalog and merge its reviewed additions with its base."""
+    resolved_path = catalog_path.resolve()
+    if resolved_path in seen_paths:
+        raise ValueError(f"catalog inheritance cycle: {catalog_path}")
+    seen_paths.add(resolved_path)
+
     payload = json.loads(catalog_path.read_text(encoding="utf-8"))
     corpus_id = _required_text(payload, "corpus_id", "catalog")
     raw_sources = payload.get("sources")
@@ -159,8 +205,14 @@ def load_source_catalog(path: str | Path) -> tuple[str, tuple[CorpusSource, ...]
         raise ValueError("catalog.sources must be a non-empty list")
 
     sources: list[CorpusSource] = []
-    source_ids: set[str] = set()
-    urls: set[str] = set()
+    base_catalog = _optional_text(payload, "base_catalog", "catalog")
+    if base_catalog is not None:
+        base_path = (catalog_path.parent / base_catalog).resolve()
+        _, base_sources = _load_source_catalog(base_path, seen_paths=seen_paths)
+        sources.extend(base_sources)
+
+    source_ids = {source.source_id for source in sources}
+    urls = {source.url for source in sources}
     for index, raw_source in enumerate(raw_sources):
         if not isinstance(raw_source, dict):
             raise ValueError(f"catalog.sources[{index}] must be an object")
@@ -188,12 +240,19 @@ def load_source_catalog(path: str | Path) -> tuple[str, tuple[CorpusSource, ...]
         urls.add(source.url)
         sources.append(source)
 
+    seen_paths.remove(resolved_path)
     return corpus_id, tuple(sources)
 
 
 def extract_html_text(raw_html: bytes, extractor: str, title: str) -> str:
     """Extract readable article text from one supported official HTML layout."""
-    if extractor not in {"who_article", "who_qa", "gov_article", "gov_trs"}:
+    if extractor not in {
+        "who_article",
+        "who_qa",
+        "gov_article",
+        "gov_trs",
+        "gov_doc_content",
+    }:
         raise ValueError(f"unsupported HTML extractor: {extractor}")
     parser = _ArticleTextParser(extractor)
     parser.feed(raw_html.decode("utf-8"))

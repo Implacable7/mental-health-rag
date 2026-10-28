@@ -43,6 +43,45 @@ def test_real_catalog_contains_approved_authoritative_sources() -> None:
     assert all(source.url.startswith("https://") for source in sources)
 
 
+def test_v2_catalog_inherits_v1_and_adds_reviewed_sources() -> None:
+    corpus_id, sources = corpus.load_source_catalog("data/sources/corpus_v2.json")
+
+    assert corpus_id == "mental_health_zh_v2"
+    assert len(sources) == 22
+    assert [source.source_id for source in sources[-6:]] == [
+        "who_ptsd",
+        "who_autism",
+        "who_child_maltreatment",
+        "who_mental_health_emergencies",
+        "gov_sleep_health_core_information",
+        "gov_depression_signs_not_diagnosis",
+    ]
+    assert len({source.source_id for source in sources}) == len(sources)
+    assert len({source.url for source in sources}) == len(sources)
+
+
+def test_catalog_rejects_inheritance_cycle(tmp_path: Path) -> None:
+    first = tmp_path / "first.json"
+    second = tmp_path / "second.json"
+    first.write_text(
+        json.dumps(
+            {"corpus_id": "first", "base_catalog": "second.json", "sources": [_source()]},
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    second.write_text(
+        json.dumps(
+            {"corpus_id": "second", "base_catalog": "first.json", "sources": [_source()]},
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="inheritance cycle"):
+        corpus.load_source_catalog(first)
+
+
 def test_catalog_rejects_duplicate_source_ids(tmp_path: Path) -> None:
     catalog_path = tmp_path / "sources.json"
     _write_catalog(
@@ -92,6 +131,23 @@ def test_extracts_government_article_layout() -> None:
 
     assert "政策标题" in text
     assert "心理健康服务正文" in text
+
+
+def test_extracts_government_doc_content_layout() -> None:
+    raw_html = """
+    <html><body><nav>导航噪声</nav><div id="docContent">
+    <p>抑郁情绪不等同于抑郁症。</p><img src="figure.png">
+    <p>需要由专业人员综合评估。</p></div>
+    <div>扫一扫在手机上查看当前页面</div><footer>页脚噪声</footer></body></html>
+    """.encode()
+
+    text = corpus.extract_html_text(raw_html, "gov_doc_content", "科普标题")
+
+    assert "抑郁情绪不等同于抑郁症" in text
+    assert "专业人员综合评估" in text
+    assert "导航噪声" not in text
+    assert "扫一扫" not in text
+    assert "页脚噪声" not in text
 
 
 def test_extracts_only_first_matching_article_root() -> None:
