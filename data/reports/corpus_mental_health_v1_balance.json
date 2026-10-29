@@ -1,0 +1,125 @@
+{
+  "generated_at_utc": "2026-10-29T12:07:29+00:00",
+  "catalog_path": "data/sources/corpus_mental_health_v1.json",
+  "chunks_path": "data/processed/chunks_mental_health_v1.jsonl",
+  "source_count": 100,
+  "chunk_count": 3104,
+  "integrity": {
+    "catalog_source_ids_unique": true,
+    "chunk_source_ids_all_in_catalog": true,
+    "missing_source_ids": []
+  },
+  "source_counts_by_content_layer": {
+    "policy_service": 6,
+    "professional_reference": 7,
+    "public_education": 87
+  },
+  "chunk_counts_by_content_layer": {
+    "policy_service": 33,
+    "professional_reference": 2302,
+    "public_education": 769
+  },
+  "chunk_share_by_content_layer": {
+    "policy_service": 0.010631,
+    "professional_reference": 0.741624,
+    "public_education": 0.247745
+  },
+  "authority_tier_source_counts": {
+    "A": 75,
+    "B": 2,
+    "legacy_reviewed": 23
+  },
+  "risk_level_source_counts": {
+    "high": 26,
+    "sensitive": 39,
+    "standard": 35
+  },
+  "concentration": {
+    "top_3_source_chunk_share": 0.687178,
+    "largest_source_chunk_share": 0.344072,
+    "top_sources": [
+      {
+        "source_id": "who_world_mental_health_report_2022_zh",
+        "title": "世界精神卫生报告：向人人享有心理健康服务转型",
+        "content_layer": "professional_reference",
+        "chunk_count": 1068,
+        "chunk_share": 0.344072
+      },
+      {
+        "source_id": "who_mental_health_human_rights_legislation_zh",
+        "title": "精神卫生、人权与立法：指导与实践",
+        "content_layer": "professional_reference",
+        "chunk_count": 701,
+        "chunk_share": 0.225838
+      },
+      {
+        "source_id": "hk_dh_elderly_mental_health_handbook",
+        "title": "活出安康乐耆年：长者精神健康手册",
+        "content_layer": "professional_reference",
+        "chunk_count": 364,
+        "chunk_share": 0.117268
+      },
+      {
+        "source_id": "who_psychological_first_aid_zh",
+        "title": "现场工作者心理急救指南",
+        "content_layer": "public_education",
+        "chunk_count": 117,
+        "chunk_share": 0.037693
+      },
+      {
+        "source_id": "who_mental_health_action_plan_2013_2030_zh",
+        "title": "2013—2030年精神卫生综合行动计划",
+        "content_layer": "professional_reference",
+        "chunk_count": 96,
+        "chunk_share": 0.030928
+      },
+      {
+        "source_id": "who_doing_what_matters_zh",
+        "title": "压力之下 择要事为之 图解指南",
+        "content_layer": "public_education",
+        "chunk_count": 79,
+        "chunk_share": 0.025451
+      },
+      {
+        "source_id": "who_adolescent_mental_health_guideline_summary_zh",
+        "title": "青少年心理健康促进和预防干预指南 执行摘要",
+        "content_layer": "professional_reference",
+        "chunk_count": 33,
+        "chunk_share": 0.010631
+      },
+      {
+        "source_id": "hk_dh_cyberbullying_adolescent_suicide_prevention",
+        "title": "网络欺凌与预防青少年自杀",
+        "content_layer": "public_education",
+        "chunk_count": 27,
+        "chunk_share": 0.008698
+      },
+      {
+        "source_id": "nhc_healthy_older_adult_standard_wst802_2022",
+        "title": "中国健康老年人标准（WS/T 802—2022）",
+        "content_layer": "professional_reference",
+        "chunk_count": 25,
+        "chunk_share": 0.008054
+      },
+      {
+        "source_id": "gov_mental_health_service_2025_2027",
+        "title": "儿科和精神卫生服务年行动方案 2025至2027年",
+        "content_layer": "public_education",
+        "chunk_count": 17,
+        "chunk_share": 0.005477
+      }
+    ]
+  },
+  "target_status": {
+    "all_layers_at_least_1200_chunks": true,
+    "public_education_at_least_1200_chunks": false
+  },
+  "retrieval_policy_recommendation": {
+    "default_pool": "public_education",
+    "routed_pools": [
+      "policy_service",
+      "professional_reference"
+    ],
+    "reason": "默认公众问答应优先检索科普层；政策服务和专业参考资料按问题意图路由，并对单一来源设置候选片段上限，避免长文档片段数量偏置。"
+  }
+}

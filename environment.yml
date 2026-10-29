@@ -22,6 +22,7 @@ dependencies:
       - rank-bm25==0.2.2
       - streamlit==1.66.0
       - pypdf==6.21.1
+      - certifi==2026.10.19
       - python-dotenv==1.2.4
       - pytest==9.1.1
       - ruff==0.17.1

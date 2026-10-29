@@ -1,0 +1,538 @@
+{
+  "build_id": "7a7204570fe201fe0ef8f9dfe3ed2a63793b9acfb39a16b04fcdeccb0c7ca997",
+  "configuration": {
+    "chunk_overlap": 60,
+    "chunk_size": 400,
+    "chunking_method": "recursive_character",
+    "chunking_version": "1",
+    "keep_separator": "end",
+    "length_function": "len",
+    "separators": [
+      "\n",
+      "。",
+      "！",
+      "？",
+      "；",
+      "，",
+      " ",
+      ""
+    ]
+  },
+  "documents": [
+    {
+      "chunk_count": 7,
+      "document_id": "ab349d8d8d299d9a6792f80778198ea5ff051f1128aea40bf94a26da65f32e70",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+    },
+    {
+      "chunk_count": 12,
+      "document_id": "105f5dc2e446c73d9e4fc336e76f6a32191f7e4c4aea9ac6a1cf0baeb4928ab7",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-disorders"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "327c69faa0cb5c8f122d03d1d0fa7f8f5fe5faea898281b032ac143bbe686022",
+      "source": "https://www.who.int/zh/news-room/questions-and-answers/item/stress"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "4f7ea12d388a2e23bbc6817c721a8986d7f1f46101660f0953a95de67f00f437",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/depression"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "a652139f85e2f7e27f32ee1c72fa730dbaad8b29762c7366ebdc583cf92842db",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/anxiety-disorders/"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "e128cc174c9300d8c5d17dfe4d5c4cbaf9350af6dbdb42e625937499853916dd",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/bipolar-disorder"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "87c98b753eeab1454fa5e05081b7b805571d5c3995313deb19d0456e28ec9f98",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/schizophrenia"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "2a7b841fa34f314b7ab6e4e47a60ac15de281ed8c28b05ed3cff984bfc085a28",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-mental-health"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "2b13311fece05b3c3455d8170104ae7b52eb631dcb3bb8de2508d623dfbe1a99",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-of-older-adults"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "b1ff23a1da78dad698bda1a19956b34ce68b3a8d0e0d4adc3c107b47d97c2fed",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-at-work"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "5d3be0f39ed1a7a9436b9b3e92980834c585c4b57a4dc0e9efced81d64f70ce4",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/suicide"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "ed415ec30224811f0152edbe1a87a5de874df7a6e5e487764de2430cb5f00f73",
+      "source": "https://www.who.int/zh/news-room/questions-and-answers/item/suicide"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "2992a2fce0fced5a1f0e4a152006ea40db5cb864db6e0a60b9c245c6e7ad19a6",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/dementia"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "f45b7eb402bfb7253561376d1ec7d505e3f72fcbe63493746eb00aae4e3461ae",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/alcohol/"
+    },
+    {
+      "chunk_count": 17,
+      "document_id": "b4280c8e84e4dabe27bffe45a03043dd81c34a552cbceba3c03a5e8d02bbf608",
+      "source": "https://app.www.gov.cn/govdata/gov/202504/28/527934/article.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "2a6ff352e68f6b0adfc21d3a886fc48462fde28dc790695fcab21b9bf2b7040c",
+      "source": "https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "30c5f07fff540715bbe52c6722811dd180d5f8e52ac221d7105eab4d82b49417",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/post-traumatic-stress-disorder"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "8bc1978b448d3ac2617c4fdef9520ed206b3f4bbff1bd5925f4b6463e8b62118",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/autism-spectrum-disorders"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "4941f253821f7bf7820bebec2e795a241adc64e13654b77881060e0c3fff4e8a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/child-maltreatment"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "d7d04ad4c3a3fed991266c45dc5fb045dddd737fd2f3361f6cef14455c64d67e",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-in-emergencies"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "f88b57ad85fad6c30a3db5036b76c50e106a7cbbd1a448998fb040195c209c5f",
+      "source": "https://www.gov.cn/lianbo/bumen/202503/content_7014409.htm"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "3e89445e3b17d7384da34c832f984b8c45a541d281cfc88cf4e3849622332cc0",
+      "source": "https://www.zlq.gov.cn/zlq/ztzl/jkzlqxd/2025061311220973449/index.shtml"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "3dec5a48500f7191029ea11221018448eb42b1f4bdb7b6785af0ce2d46681f3d",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/violence-against-children"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "910ec8caf5a0d55f851113a356c9a4f027405181fdd6bf3baaf786d79b61af75",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/gambling"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "65e454b4b605a7f36b53e2d1f0e2c3f50cb9b3a8c9343d492fdf19c4cfcbdf69",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/violence-against-women"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "4d6f34a9cb63ccc86fbabea5406ca4a9d7f4829b81d73cf39552ffb5c1f9fd8a",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/youth-violence"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "d8c01f83e6da088260d3b3d560e17b3292641d26f67cd167fdb87931e7232274",
+      "source": "https://www.who.int/zh/news-room/fact-sheets/detail/refugee-and-migrant-mental-health"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "58cf4b27c45377ed960a34a6a25573771ee8b12fe3a0183d663b0a5f78d34809",
+      "source": "https://www.who.int/zh/news/item/02-09-2025-over-a-billion-people-living-with-mental-health-conditions-services-require-urgent-scale-up"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "db084379e759c4d70c469cd3e51c175bdd74e39c8cbb095307a07e456ca4df01",
+      "source": "https://www.who.int/zh/news/item/07-11-2025-joint-call-to-strengthen-policy-and-investment-for-child-and-youth-mental-health-and-well-being"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "ba9374f316a60acf6b8d9c1ff6464c18680ab289361f346807dda2509db6e036",
+      "source": "https://www.who.int/zh/news/item/17-06-2022-who-highlights-urgent-need-to-transform-mental-health-and-mental-health-care"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "851a272565889b47e206f11e8ead62ba84fd1ac334a1411677ab6764156ec799",
+      "source": "https://www.who.int/zh/news/item/25-03-2025-new-who-guidance-calls-for-urgent-transformation-of-mental-health-policies"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "c465465c8689fab9f62528f9fd573715884635481b3b52a01bc059c29f3aeebe",
+      "source": "https://www.who.int/zh/news/item/18-09-2025-who-urges-cost-effective-solutions-on-ncds-and-mental-health-amidst-slowing-progress"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "948172ff19fce83bc684cfdc841ecf841dd56d7a0754b486c03d5101bf494846",
+      "source": "https://www.who.int/zh/news/item/10-06-2021-new-who-guidance-seeks-to-put-an-end-to-human-rights-violations-in-mental-health-care"
+    },
+    {
+      "chunk_count": 1068,
+      "document_id": "f538abebff81aabd3026ef8d867d4354527811fc2d69459b19f3adcd3ffdf704",
+      "source": "https://iris.who.int/server/api/core/bitstreams/24345d87-fe7d-4260-9cde-1fc99f3ea66c/content"
+    },
+    {
+      "chunk_count": 96,
+      "document_id": "a9abdaedea644ef20875c26a59d0aee0f1ada68c303053205db3a07903119173",
+      "source": "https://iris.who.int/server/api/core/bitstreams/2ac30981-43b5-4f0f-b14f-103e8b761e06/content"
+    },
+    {
+      "chunk_count": 701,
+      "document_id": "b0ac2f77311840eb1de4af5730cfeca0206a42abe1943e336da549488babf40b",
+      "source": "https://iris.who.int/server/api/core/bitstreams/176370ce-0d73-41af-81a4-508861910bcb/content"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "7c4de789b1dbb02e10a56c64ddc54c99727b1e40fbaea6472a5abfd41fee4e1b",
+      "source": "https://www.who.int/zh/news/item/28-09-2022-who-and-ilo-call-for-new-measures-to-tackle-mental-health-issues-at-work"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "1f43fe4cadb14b7dacee8c311957391de26a723bd727cfb9b608aa3af3f114cb",
+      "source": "https://www.who.int/zh/news/item/17-06-2021-one-in-100-deaths-is-by-suicide"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "1c69ae7f3b5f258c45a13a45b4b4cb1cd15872a04f56ad4445c8d921605d5f7e",
+      "source": "https://www.who.int/zh/news-room/commentaries/detail/mental-health-in-the-workplace"
+    },
+    {
+      "chunk_count": 79,
+      "document_id": "55145c157ec22e14445e64c17fd5aa85d7c973d6545a9137b6c39742a5aa8979",
+      "source": "https://iris.who.int/server/api/core/bitstreams/12325ca3-997b-4906-97b4-e57a99318384/content"
+    },
+    {
+      "chunk_count": 33,
+      "document_id": "94af930312292c5af941ca18676ad6cc5a00cd607f61a5ed808f4b7e1e659a30",
+      "source": "https://iris.who.int/server/api/core/bitstreams/40a3df5e-3e1a-4bb5-b9ca-14e460e9593d/content"
+    },
+    {
+      "chunk_count": 15,
+      "document_id": "652a31f2336f823a1417cd540dce412e3c88654c0cb15b613f2939ab698c7a47",
+      "source": "https://iris.who.int/server/api/core/bitstreams/a03a6157-58e8-4796-a2ab-6c3ee5380915/content"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "296ad4b5162028039706ba178b58de56053d0f696297fbf82363380ec62b2a9b",
+      "source": "https://www.who.int/zh/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "7cb2960ebeacbbe92f4bfb3d2db6dce735ae71c7306a68b40e70a359fbf3bc24",
+      "source": "https://www.who.int/zh/news-room/commentaries/detail/loneliness-and-isolation-the-hidden-threat-to-global-health-we-can-no-longer-ignore"
+    },
+    {
+      "chunk_count": 117,
+      "document_id": "2b0c3ae8e4afa81e23b8163ae5ed27e9a4f694e07a428d8c718a0295de30ecb0",
+      "source": "https://iris.who.int/server/api/core/bitstreams/92bbfaa3-d874-40a4-a1e9-7b6d4799d9cf/content"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "6f80e59c9d5f6ee22f62a60e298024bf72f46c33371f7bdbdb4396836805bc5c",
+      "source": "https://app.www.gov.cn/govdata/gov/202510/24/538927/article.html"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "b3e47259e9ec398d6a7e5ca37a52b6c29bdc08487ec8cb21edf294498ac0a123",
+      "source": "https://wjw.fujian.gov.cn/jggk/csxx/wsyjbgs/wsyj/201810/t20181018_4684824.htm"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "0d43e1b62ba955bfe0ac98249d15126b3e46b5372bcd7ad816dc59a175ebad77",
+      "source": "https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jksh/202608/t20260813_4821739.html"
+    },
+    {
+      "chunk_count": 25,
+      "document_id": "540c27b6ba9b531c57f6720f8759d226585ebf05fc149f6cff59849d95e8ea17",
+      "source": "https://www.nhc.gov.cn/cms-search/downFiles/49110d1bed934b6da0dbb3eb44f95395.pdf"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "94d6d5161a6f596d8e909aa6427d95b28044b2afff33a98f41a9c7516bd3c09d",
+      "source": "https://www.elderly.gov.hk/sc_chi/healthy_ageing/mental_health/caregiverstress.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "cb755c9046241a34bd31c50db818cada8f1a42e80f22db8b8dfbfd7f5232385d",
+      "source": "https://www.fhs.gov.hk/sc_chi/health_info/woman/30139.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "5d0a4670358f1858031641d50897ee92023296b9cff2413c635454bf4dbad458",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/health/health_ph/health_ph_stress.html"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "bad9fe33c1a7e6d1731b9cc7e49fcbbf6954627685452563b6ce4cf43fe5ee2d",
+      "source": "https://www.fhs.gov.hk/sc_chi/health_info/woman/30098.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "3445340982a153894268fcd08db2644e7b0b89435f958c09d0b74ddc0e80a520",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/parent_zone/txt_regulate_emotions.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "40cc55d9a7a11067c235c27a0adb9ecb0124fe21657d8a0f1bd4ffddf7b8e820",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_anxiety_issue.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "81b39f2433ff280cbc436dd622f8ff39ef87db5f7e2427b9090bec41e9dfbabb",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_sleep_issue.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "728c47224fd2f6d90d2803cda3a5ae49cba9693ff3795ab1bfd53912c7da473d",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_self-esteem_issue.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "e5ccd70c3deacb872383503c65aa4c98f11818d49eba883c6006537f4ecd6d54",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_attention_issue.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "5949d34fac1f5cc7db71713a54d02bd448c9f3ff4305db7bff25f5136e978a77",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_impulse_control_issue.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "87c95bfd0d5bd1bcd8dff1dcd46e512df5cb9495fe3160171351910bf885c79c",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_academic_performance_issue.html"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "c98b8346db9acb68a4e154dbf586d39c16a2733796d66aef3ecc25ef74600a67",
+      "source": "https://www3.ha.org.hk/cph/imh/sc/mental-health-info/4/3/1/cognitive-behavioural-therapy"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "d299ac51c62370b00b88a85a20459592459c7c2c1e2cd0be923ce62fef1bc70b",
+      "source": "https://www.elderly.gov.hk/sc_chi/healthy_ageing/mental_health/bereavement.html"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "94c25a41aedecac249c9bd72918d3227cba6960c335d1a3ddb2691900d104670",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T13_OCD_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "7f4e3e41552407342661a6ca963f23f5e05b6ec4e42c0cc04662c3838ae00eb7",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T14_ED_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "0809eb2b58e560127c2faef7a116b0fb178cab2218e7bc2f29e3be03b2b2a2f1",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T11_SM_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "2c9133c37a582235e87a586013f85f0411222dba29b7b1b3ba8d9c9befc4df6c",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T12_TS_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "a10b7f24f50e20c9d0232c1ef5ecd43a946be6b495062b96edc118042e0fff74",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T15_ODD_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "acb84839a91fb640ecbf30cd3a499fe6534cd3438bb2cb0df074771248be8a0f",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T16_AD_Chinese-S.pdf"
+    },
+    {
+      "chunk_count": 9,
+      "document_id": "2b7112b6b5f260351c46e7788215359c08172dbe23657ba8b9243f9ced254ee6",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T17_PS_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "ef607709212ad17e051d63907a734b7efa814d471a3b79bc9022aa0413aa3759",
+      "source": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T10_DD_Chinese_S.pdf"
+    },
+    {
+      "chunk_count": 11,
+      "document_id": "c3119da38ce98052e0dc7a34fb5f13361a109045a9a36cd0fd5e479403794029",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/psychotherapy/"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "ce128d7fed8fc5f680c24d6ebd9fa3c35fb7b8d1162545233d757772776d8da5",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/basic-understanding-of-psychiatric-medications/"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "5d0e69d100e84f06d9b606b6ae89ebf87c4a8eff8df6edb8e713b11172477804",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/protect-mental-health-against-traumatic-events-and-news/"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "937d91de6dc3a12988c9b10530055150fb9de8a911be4586585629794f481005",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/anxiety-disorders/"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "b7f193bbb9011fff05e05a4816f6e4ebb406732698248ae87568c674b4f7a92a",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/depression/"
+    },
+    {
+      "chunk_count": 6,
+      "document_id": "2d9b31e52a7c4042c5b5f961f570511b1264b081dd7c2d2e4e1a1fe8b39015a5",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/mixed-anxiety-and-depressive-disorder/"
+    },
+    {
+      "chunk_count": 8,
+      "document_id": "3f3e1635f1e3ba29233caf4f91eca0aaaa00ee1b35cebdf88ed45bee4c49eaca",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/bipolar-disorder/"
+    },
+    {
+      "chunk_count": 10,
+      "document_id": "2cc017bf565d4c08112d6a73f19706b77c630f4ddc41c9f8dd8e57c202550cf8",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/psychosis/"
+    },
+    {
+      "chunk_count": 27,
+      "document_id": "44fdbf6edac894b7e8855070f07f53d880efad6f7d855e6738e63fb9d92c4de0",
+      "source": "https://www.shallwetalk.hk/app/public/files/Cyberbullying_and_Prevention_of_Adolescent_Suicide_TC.pdf"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "cc3b24ed00c8f559b89801c7fa75926cadadbdeb32607a002bdcfe5025bce86e",
+      "source": "https://www.elderly.gov.hk/tc_chi/health_information/mental_illness/coping_with_anxiety.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "5ced4c9435cd2d2d8a9f09247c0954733d9ebe561470eac8d43c741a7cf18b27",
+      "source": "https://www.elderly.gov.hk/tc_chi/health_information/dementia/dementia.html"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "ba89ad858434bf4fca47e8e70e2bc69a249f246c80bb4305054982fb0a07fba8",
+      "source": "https://www.elderly.gov.hk/tc_chi/education_and_media_resources/files/%E7%9D%A1%E7%9C%A0%E8%88%87%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%20%282025%E5%B9%B410%E6%9C%88%29.pdf"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "33daf0da28d2e4cde8a7e6a9f889f3f82568a2291dc29cbc49c61768225bb0e4",
+      "source": "https://www.fhs.gov.hk/tc_chi/health_info/woman/14750.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "4cdefa37d301aaefabc21c898ef9ee9d5189f2414021ceea41d81d0c3c078899",
+      "source": "https://www.fhs.gov.hk/tc_chi/health_info/woman/30013.html"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "163a69ba31a6a9242771877e1ffa83bcdd15520ed46b2445f1f2951f168b26f1",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/grief-management/"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "6a1545725dd6e72a5cc02d0b13aefe5d648fe4a0471475d9c48461edc11ecdf8",
+      "source": "https://www.elderly.gov.hk/tc_chi/health_information/mental_illness/depression.html"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "958176535a17af7aad8b320ac120013846363dff5f9a8082127c90c497bb0f2c",
+      "source": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/healthy_living/socialisolation.html"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "32162bba01fcc2304eb233f64ae29c1b9ae1654907ce61a145df72b2eb52c78c",
+      "source": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/mental_health/coping_with_chronic_illness.html"
+    },
+    {
+      "chunk_count": 13,
+      "document_id": "381af8b4969fa26f7993b4dcc2bf0a6526f102a82b8fd35fa5125374cece7292",
+      "source": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/healthy_living/prevention_of_elder_abuse.html"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "d247930ab941e7ef32fd9579914f77eb54f381e08649c08831aa4d7486aaaf9c",
+      "source": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/mental_health/behaviour.html"
+    },
+    {
+      "chunk_count": 364,
+      "document_id": "6abc5ac2abcfdda6519f94f6e13adf47a240b1cfd234668c9ab17efbd160c8c9",
+      "source": "https://www.elderly.gov.hk/tc_chi/education_and_media_resources/files/mental_health/mental_health_W3C%20version.pdf"
+    },
+    {
+      "chunk_count": 14,
+      "document_id": "fe394452ca90133903608cc5f9683ca581c766858d8e7696f2569ce47b6d8d49",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/autism-spectrum-disorder/"
+    },
+    {
+      "chunk_count": 7,
+      "document_id": "ff82a2b5545488cda3554517a0710c04ee8524f409875f7282ce02d3c1b4214c",
+      "source": "https://www.shallwetalk.hk/zh/mental-health-information/attention-deficit-hyperactivity-disorder/"
+    },
+    {
+      "chunk_count": 5,
+      "document_id": "b57371a23c853d06576067ded31bbcc8a6194bbd416072cef7408798fc8e04d9",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/internet/media/txt_stand_against_cyber_bullying_post_c.html"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "3bc2987f49f25105deadc0c4f2231bc6d4fc7cde565bafa1b63a64556721a1ce",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_anger_selfcare_tips_zh-cn.pdf"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "e5f7d9a59ccccc187266f1644458e6c36bb4b48928a98268f00b3f03e4388ce5",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_anger_parenting_tips_zh-cn.pdf"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "63abce8b2b44e5e39fcde9c52b4de769eeb78c1c5cad5afba610bf455d37f01b",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_understanding_and_dealing_with_insomnia_selfcare_tips_zh-cn.pdf"
+    },
+    {
+      "chunk_count": 3,
+      "document_id": "e61b718b304f07a4b89849be2eeb10bdf4ec5b1fe7ccd9059ce3c314e49d0612",
+      "source": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_understanding_and_dealing_with_insomnia_parenting_tips_zh-cn.pdf"
+    },
+    {
+      "chunk_count": 2,
+      "document_id": "db7e211939c8ce604241fcb8960f531ace8550d0dee91164b5e73c7a5848029b",
+      "source": "https://www.elderly.gov.hk/tc_chi/newsletter/vol13/p2.html"
+    },
+    {
+      "chunk_count": 4,
+      "document_id": "50d83fe6df592898f0f556802cc08934053eae8e8ce5a409818c881850534f89",
+      "source": "https://www.elderly.gov.hk/tc_chi/newsletter/vol13/p3.html"
+    }
+  ],
+  "generated_at_utc": "2026-10-29T12:07:28+00:00",
+  "input_path": "data/processed/corpus_v1.jsonl",
+  "input_sha256": "77279dc855c175d597907941d5b552cfe78006dc7d0952be223b1b5da486dac9",
+  "output_path": "data/processed/chunks_mental_health_v1.jsonl",
+  "output_sha256": "dcb97ae0e9a42954acde94de21fd3824c5af13f02dbe32930eb9788f2dbdf748",
+  "results": {
+    "all_chunk_ids_unique": true,
+    "chunk_count": 3104,
+    "input_count": 100,
+    "max_chunk_chars": 400,
+    "max_chunks_per_document": 1068,
+    "min_chunk_chars": 19,
+    "min_chunks_per_document": 2
+  },
+  "schema_version": "1"
+}

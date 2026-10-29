@@ -1,0 +1,2008 @@
+{
+  "corpus_id": "mental_health_zh_curated_v1",
+  "purpose": "面向心理健康科普问答的严格语料目录；基础目录仅保留核心心理健康资料，再合并逐篇审核通过的官方补充资料。",
+  "language": "zh-CN",
+  "selection_policy": "来源权威、与心理健康直接相关、正文可稳定提取且通过顺序语义锚点；支持性背景资料和一般医学资料均不进入默认检索池。",
+  "sources": [
+    {
+      "source_id": "who_mental_health",
+      "title": "精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "心理健康基础",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-strengthening-our-response",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "精神卫生促进和预防",
+        "世卫组织的反应"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mental_disorders",
+      "title": "精神障碍",
+      "publisher": "世界卫生组织",
+      "topic": "精神障碍概览",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-disorders",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "焦虑症",
+        "创伤后应激障碍",
+        "卫生系统与社会支持"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_stress",
+      "title": "压力",
+      "publisher": "世界卫生组织",
+      "topic": "压力与自我照护",
+      "source_type": "html",
+      "extractor": "who_qa",
+      "url": "https://www.who.int/zh/news-room/questions-and-answers/item/stress",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "何为压力？",
+        "如何管理压力？",
+        "限制关注新闻的时间"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_depression",
+      "title": "抑郁障碍",
+      "publisher": "世界卫生组织",
+      "topic": "抑郁",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/depression",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "概述",
+        "症状和类型",
+        "诊断和治疗"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_anxiety",
+      "title": "焦虑症",
+      "publisher": "世界卫生组织",
+      "topic": "焦虑",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/anxiety-disorders/",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "症状和模式",
+        "成因和预防",
+        "诊断和治疗"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_bipolar",
+      "title": "双相情感障碍",
+      "publisher": "世界卫生组织",
+      "topic": "双相情感障碍",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/bipolar-disorder",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "症状和类型",
+        "风险和保护因素",
+        "治疗和护理"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_schizophrenia",
+      "title": "精神分裂症",
+      "publisher": "世界卫生组织",
+      "topic": "精神分裂症",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/schizophrenia",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "症状",
+        "管理和支助",
+        "世卫组织的应对"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_adolescent_mental_health",
+      "title": "青少年精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "儿童青少年",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-mental-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "精神卫生决定因素",
+        "自杀和自残",
+        "早期发现和治疗"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_older_adults",
+      "title": "老年人精神健康",
+      "publisher": "世界卫生组织",
+      "topic": "老年人",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-of-older-adults",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "危险因素",
+        "促进和预防",
+        "治疗和护理"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mental_health_at_work",
+      "title": "工作场所精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "工作场所",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-at-work",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "工作场所精神卫生风险",
+        "支持有精神卫生问题的劳动者",
+        "世卫组织的应对"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_suicide",
+      "title": "自杀",
+      "publisher": "世界卫生组织",
+      "topic": "自杀预防与危机识别",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/suicide",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "风险人群",
+        "预防与控制",
+        "耻辱和禁忌"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_suicide_qa",
+      "title": "关于自杀的问答",
+      "publisher": "世界卫生组织",
+      "topic": "危机识别与求助",
+      "source_type": "html",
+      "extractor": "who_qa",
+      "url": "https://www.who.int/zh/news-room/questions-and-answers/item/suicide",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "每年有多少人死于自杀？",
+        "当真只有有精神健康问题的人才会有自杀倾向吗？",
+        "如果认为某人面临迫切危险，不要让他独处。"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_dementia",
+      "title": "痴呆症",
+      "publisher": "世界卫生组织",
+      "topic": "认知健康与照护",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/dementia",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "体征和症状",
+        "治疗和护理",
+        "风险因素和预防措施"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_alcohol",
+      "title": "酒精",
+      "publisher": "世界卫生组织",
+      "topic": "物质使用与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/alcohol/",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "概述",
+        "影响酒精消费及酒精相关伤害的因素",
+        "世卫组织的应对"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "gov_mental_health_service_2025_2027",
+      "title": "儿科和精神卫生服务年行动方案 2025至2027年",
+      "publisher": "中国政府网转载国家卫生健康委等部门",
+      "topic": "中国心理健康服务与就医支持",
+      "source_type": "html",
+      "extractor": "gov_article",
+      "url": "https://app.www.gov.cn/govdata/gov/202504/28/527934/article.html",
+      "license_note": "中国政府网公开政策文件；本项目保留发布机关和原始 URL，仅用于学习和研究。",
+      "required_phrases": [
+        "一、工作目标",
+        "（二）心理健康和精神卫生服务重点任务。",
+        "四、组织实施"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "gov_12356_hotline",
+      "title": "国家卫生健康委关于应用12356全国统一心理援助热线电话号码的通知",
+      "publisher": "中国政府网转载国家卫生健康委",
+      "topic": "12356心理援助热线",
+      "source_type": "html",
+      "extractor": "gov_trs",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm",
+      "license_note": "中国政府网公开政策文件；本项目保留发布机关和原始 URL，仅用于学习和研究。",
+      "required_phrases": [
+        "12356",
+        "每日提供不少于18小时心理援助服务",
+        "积极推进心理援助与110、119、120等服务热线"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_ptsd",
+      "title": "创伤后应激障碍",
+      "publisher": "世界卫生组织",
+      "topic": "创伤与创伤后应激",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/post-traumatic-stress-disorder",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "症状和模式",
+        "自我护理"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_autism",
+      "title": "自闭症",
+      "publisher": "世界卫生组织",
+      "topic": "神经发育与支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/autism-spectrum-disorders",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "评估和照护",
+        "人权"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_child_maltreatment",
+      "title": "虐待儿童",
+      "publisher": "世界卫生组织",
+      "topic": "儿童保护与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/child-maltreatment",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "虐待的后果",
+        "预防"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mental_health_emergencies",
+      "title": "紧急情况下的精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "突发事件心理健康与社会心理支持",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/mental-health-in-emergencies",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "建议采取的行动",
+        "心理急救"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "gov_sleep_health_core_information",
+      "title": "睡眠健康核心信息及释义",
+      "publisher": "全国爱国卫生运动委员会办公室",
+      "topic": "睡眠健康与心理健康",
+      "source_type": "html",
+      "extractor": "gov_trs",
+      "url": "https://www.gov.cn/lianbo/bumen/202503/content_7014409.htm",
+      "license_note": "中国政府网转载国家卫生健康委公开科普材料；本项目保留发布机关和原始 URL，仅用于学习和研究。",
+      "required_phrases": [
+        "睡眠可消除疲劳",
+        "长期睡眠不良",
+        "寻求专业帮助"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "gov_depression_signs_not_diagnosis",
+      "title": "出现抑郁表现，就是得了抑郁症吗",
+      "publisher": "正蓝旗人民政府转载健康中国行动",
+      "topic": "抑郁情绪、抑郁症状与抑郁症的区别",
+      "source_type": "html",
+      "extractor": "gov_doc_content",
+      "url": "https://www.zlq.gov.cn/zlq/ztzl/jkzlqxd/2025061311220973449/index.shtml",
+      "license_note": "政府网站转载健康中国行动科普材料；作者为国家健康科普专家库成员，本项目保留发布机构、作者和原始 URL，仅用于学习和研究。",
+      "required_phrases": [
+        "出现抑郁情绪、抑郁症状并不等同于患抑郁症",
+        "什么是抑郁症状",
+        "请及时到正规医院精神科就诊"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_violence_against_children",
+      "title": "暴力侵害儿童行为",
+      "publisher": "世界卫生组织",
+      "topic": "儿童暴力、欺凌与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/violence-against-children",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "欺凌（包括网络欺凌）",
+        "暴力的影响",
+        "预防和应对"
+      ],
+      "landing_url": null,
+      "authority_tier": "legacy_reviewed",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_gambling",
+      "title": "赌博",
+      "publisher": "世界卫生组织",
+      "topic": "行为成瘾与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/gambling",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "谁面临风险",
+        "体征和症状",
+        "预防与控制"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_violence_against_women",
+      "title": "暴力侵害妇女行为",
+      "publisher": "世界卫生组织",
+      "topic": "性别暴力、创伤与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/violence-against-women",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "问题的范围",
+        "健康后果",
+        "卫生部门的作用"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "who_youth_violence",
+      "title": "青少年暴力",
+      "publisher": "世界卫生组织",
+      "topic": "青少年暴力、欺凌与预防",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/youth-violence",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "问题的范围",
+        "风险因素",
+        "预防"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_refugee_and_migrant_mental_health",
+      "title": "难民和移民心理健康",
+      "publisher": "世界卫生组织",
+      "topic": "迁移与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/fact-sheets/detail/refugee-and-migrant-mental-health",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要事实",
+        "低收入和中等收入国家收容了世界上71%的难民和其他需要国际保护的人(1)。",
+        "面对逆境的难民和移民比东道国人口更有可能出现抑郁、焦虑、创伤后应激障碍、自杀和精神病等精神健康问题。"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_mental_health_service_scale_up_2025",
+      "title": "有精神健康问题的人高达10多亿人，精神卫生服务规模亟需扩大",
+      "publisher": "世界卫生组织",
+      "topic": "全球精神健康负担与服务可及性",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/02-09-2025-over-a-billion-people-living-with-mental-health-conditions-services-require-urgent-scale-up",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "《世界精神卫生现状》所列的主要数据",
+        "《2024年精神卫生地图集》的主要结论",
+        "全球呼吁扩大精神卫生行动"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_child_youth_mental_health_call_2025",
+      "title": "联合呼吁加强儿童和青年心理健康与福祉的政策扶持和资金投入",
+      "publisher": "世界卫生组织等联合国机构",
+      "topic": "儿童青少年心理健康与早期干预",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/07-11-2025-joint-call-to-strengthen-policy-and-investment-for-child-and-youth-mental-health-and-well-being",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "重要性何在",
+        "政策缺口",
+        "推动儿童和青年心理健康政策的联合呼吁"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "policy_service",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_transform_mental_health_2022",
+      "title": "世卫组织强调迫切需要彻底改变精神健康和精神卫生保健领域的现状",
+      "publisher": "世界卫生组织",
+      "topic": "精神卫生促进、预防与服务转型",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/17-06-2022-who-highlights-urgent-need-to-transform-mental-health-and-mental-health-care",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "1. 深化我们对精神卫生工作的重视与承诺",
+        "将有精神卫生问题的人纳入社会和决策的各个方面",
+        "3. 加强精神卫生保健"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "policy_service",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mental_health_policy_guidance_2025",
+      "title": "世卫组织新指导文件呼吁紧急转变精神卫生政策",
+      "publisher": "世界卫生组织",
+      "topic": "精神卫生政策与以人为本服务",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/25-03-2025-new-who-guidance-calls-for-urgent-transformation-of-mental-health-policies",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "精神卫生保健转型的蓝图",
+        "加强精神卫生系统的适当方法",
+        "制定和实施指导文件"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "policy_service",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_ncd_mental_health_solutions_2025",
+      "title": "世卫组织敦促采取具有成本效益的非传染性疾病和精神卫生解决方案",
+      "publisher": "世界卫生组织",
+      "topic": "精神卫生干预与公共卫生行动",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/18-09-2025-who-urges-cost-effective-solutions-on-ncds-and-mental-health-amidst-slowing-progress",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "进展缓慢，生命堪忧",
+        "解决方案负担得起且具成本效益",
+        "改变未来的政治意愿"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "policy_service",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mental_health_human_rights_2021",
+      "title": "世卫组织新指导力求消除精神卫生保健领域的侵犯人权行为",
+      "publisher": "世界卫生组织",
+      "topic": "精神卫生服务、人权与社区照护",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/10-06-2021-new-who-guidance-seeks-to-put-an-end-to-human-rights-violations-in-mental-health-care",
+      "license_note": "WHO 网站内容，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "全球大多数精神卫生保健服务继续由精神病医院提供",
+        "必须大大加快向重新设计的精神卫生服务过渡",
+        "政府的大部分精神卫生预算仍然用于精神病医院"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "policy_service",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_world_mental_health_report_2022_zh",
+      "title": "世界精神卫生报告：向人人享有心理健康服务转型",
+      "publisher": "世界卫生组织，国家心理健康和精神卫生防治中心译",
+      "topic": "全球心理健康科普、促进预防与服务转型",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/24345d87-fe7d-4260-9cde-1fc99f3ea66c/content",
+      "license_note": "WHO 中文报告，按 CC BY-NC-SA 3.0 IGO 条款用于非商业学习与研究并注明来源。",
+      "required_phrases": [
+        "心理健康不仅仅是没有疾病",
+        "必须加强我们的联合行动",
+        "们的愿景是一个重视"
+      ],
+      "landing_url": "https://www.who.int/zh/publications/b/64597",
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "professional_reference",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_mental_health_action_plan_2013_2030_zh",
+      "title": "2013—2030年精神卫生综合行动计划",
+      "publisher": "世界卫生组织",
+      "topic": "精神卫生政策、促进预防与服务体系",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/2ac30981-43b5-4f0f-b14f-103e8b761e06/content",
+      "license_note": "WHO 中文行动计划，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "目标",
+        "实施方案",
+        "愿景"
+      ],
+      "landing_url": "https://www.who.int/zh/publications/i/item/9789240031029",
+      "authority_tier": "A",
+      "audience": "professional",
+      "content_layer": "professional_reference",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_mental_health_human_rights_legislation_zh",
+      "title": "精神卫生、人权与立法：指导与实践",
+      "publisher": "世界卫生组织与联合国人权事务高级专员办事处，上海市精神卫生中心译",
+      "topic": "精神卫生人权、法律与社区融入",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/176370ce-0d73-41af-81a4-508861910bcb/content",
+      "license_note": "WHO 与联合国人权高专办中文指南，仅用于非商业学习与研究并注明来源。",
+      "required_phrases": [
+        "精神卫生、人权与立法",
+        "转向社区融入",
+        "第一章 重思精神卫生立法"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "professional",
+      "content_layer": "professional_reference",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_workplace_mental_health_measures_2022",
+      "title": "世卫组织和国际劳工组织呼吁采取新措施解决工作中的精神卫生问题",
+      "publisher": "世界卫生组织与国际劳工组织",
+      "topic": "工作场所心理健康风险、支持与重返工作",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/28-09-2022-who-and-ilo-call-for-new-measures-to-tackle-mental-health-issues-at-work",
+      "license_note": "WHO 官方中文网页，仅用于本项目的非商业学习与研究；使用时标注 WHO、ILO 和原始 URL。",
+      "required_phrases": [
+        "呼吁采取具体行动解决工作人口中令人关切的精神卫生问题",
+        "世卫组织关于工作场所精神卫生的全球指南建议采取行动",
+        "其目的是支持预防精神健康风险"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_suicide_prevention_guidance_2021",
+      "title": "每100例死亡中有1例死于自杀",
+      "publisher": "世界卫生组织",
+      "topic": "自杀预防、风险识别与公共卫生干预",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/17-06-2021-one-in-100-deaths-is-by-suicide",
+      "license_note": "WHO 官方中文网页，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "每100例死亡中有1例是自杀",
+        "爱惜生命",
+        "及早识别和跟踪风险人群"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "who_workplace_mental_health_commentary",
+      "title": "工作场所的精神卫生",
+      "publisher": "世界卫生组织",
+      "topic": "工作环境、职业压力与员工心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/commentaries/detail/mental-health-in-the-workplace",
+      "license_note": "WHO 官方中文评论，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "不断变化的工作环境无疑为职业发展",
+        "许多因素都会影响到员工的精神健康状况",
+        "开始制定工作场所精神卫生指南"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_doing_what_matters_zh",
+      "title": "压力之下 择要事为之 图解指南",
+      "publisher": "世界卫生组织原著，西安交通大学医学部护理学系中文翻译",
+      "topic": "压力管理与低强度心理自助",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/12325ca3-997b-4906-97b4-e57a99318384/content",
+      "license_note": "中文译本由西安交通大学医学部护理学系发布并由 WHO IRIS 收录；译本声明英文原版为权威版本。按 CC BY-NC-SA 3.0 IGO 用于非商业学习与研究。",
+      "required_phrases": [
+        "第1部分：着陆",
+        "第2部分：解套",
+        "第3部分：践行个人价值观"
+      ],
+      "landing_url": "https://iris.who.int/handle/10665/331901",
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_adolescent_mental_health_guideline_summary_zh",
+      "title": "青少年心理健康促进和预防干预指南 执行摘要",
+      "publisher": "世界卫生组织",
+      "topic": "青少年心理健康促进与预防性心理社会干预",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/40a3df5e-3e1a-4bb5-b9ca-14e460e9593d/content",
+      "license_note": "WHO 中文执行摘要，按 CC BY-NC-SA 3.0 IGO 用于非商业学习与研究并注明来源。",
+      "required_phrases": [
+        "青少年心理健康促进",
+        "建议摘要",
+        "应向所有青少年提供普遍提供的心理社会干预"
+      ],
+      "landing_url": "https://iris.who.int/handle/10665/341140",
+      "authority_tier": "A",
+      "audience": "professional",
+      "content_layer": "professional_reference",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_workplace_mental_health_guideline_summary_zh",
+      "title": "世卫组织关于职场精神卫生的指南 执行摘要",
+      "publisher": "世界卫生组织",
+      "topic": "工作场所精神卫生循证建议",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/a03a6157-58e8-4796-a2ab-6c3ee5380915/content",
+      "license_note": "WHO 中文执行摘要，按 CC BY-NC-SA 3.0 IGO 用于非商业学习与研究并注明来源。",
+      "required_phrases": [
+        "关于组织干预措施的建议",
+        "对管理人员进行精神卫生培训",
+        "关于培训员工的建议"
+      ],
+      "landing_url": "https://iris.who.int/handle/10665/363207",
+      "authority_tier": "A",
+      "audience": "professional",
+      "content_layer": "professional_reference",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "who_social_connection_health_2025",
+      "title": "社会联系与改善健康和降低早逝风险相关",
+      "publisher": "世界卫生组织社会联系委员会",
+      "topic": "孤独 社会孤立 社会联系与心理健康",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death",
+      "license_note": "WHO 官方中文网页，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "世卫组织将社会联系定义为与他人建立联系和互动的方式",
+        "对健康、生活质量和经济的影响",
+        "迈向更健康的社会"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_loneliness_isolation_commentary_2025",
+      "title": "孤独与孤立 我们再也无法忽视的全球健康隐患",
+      "publisher": "世界卫生组织",
+      "topic": "孤独 社会孤立 社会健康与干预",
+      "source_type": "html",
+      "extractor": "who_article",
+      "url": "https://www.who.int/zh/news-room/commentaries/detail/loneliness-and-isolation-the-hidden-threat-to-global-health-we-can-no-longer-ignore",
+      "license_note": "WHO 官方中文评论，仅用于本项目的非商业学习与研究；使用时标注 WHO 和原始 URL。",
+      "required_phrases": [
+        "社会脱节已成为一个日益严重",
+        "问题并非无解",
+        "我们呼吁所有国家将社会联系作为优先事项"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "who_psychological_first_aid_zh",
+      "title": "现场工作者心理急救指南",
+      "publisher": "世界卫生组织、战争创伤基金会和世界宣明会",
+      "topic": "危机事件 心理急救 人性化支持与安全转介",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://iris.who.int/server/api/core/bitstreams/92bbfaa3-d874-40a4-a1e9-7b6d4799d9cf/content",
+      "license_note": "WHO IRIS 收录的正式中文版本，仅用于本项目的非商业学习与研究；使用时注明 WHO、战争创伤基金会、世界宣明会和原始条目。",
+      "required_phrases": [
+        "严重危机事件中遭受不幸者",
+        "人性化支持和切实帮助",
+        "尊重受助者的尊严"
+      ],
+      "landing_url": "https://iris.who.int/handle/10665/44615",
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "gov_student_mental_health_measures_qa_2025",
+      "title": "教育部基础教育司就进一步加强中小学生心理健康工作十条措施答记者问",
+      "publisher": "中国政府网转载教育部",
+      "topic": "中小学生心理健康 学业焦虑 睡眠 网络使用 家校支持",
+      "source_type": "html",
+      "extractor": "gov_article",
+      "url": "https://app.www.gov.cn/govdata/gov/202510/24/538927/article.html",
+      "license_note": "中国政府网转载的教育部正式答记者问，仅用于本项目的非商业学习与研究；使用时注明教育部和原始 URL。",
+      "required_phrases": [
+        "缓解学业考试焦虑",
+        "培养健康用网习惯",
+        "家庭教育在学生心理健康工作中起到重要作用"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "policy_service",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "fujian_nhc_mental_health_literacy_2018",
+      "title": "心理健康素养十条（2018年版）",
+      "publisher": "福建省卫生健康委员会转载国家卫生健康委员会材料",
+      "topic": "心理健康素养 求助 睡眠 抑郁焦虑 用药 儿童 老年人 减压",
+      "source_type": "html",
+      "extractor": "gov_trs",
+      "url": "https://wjw.fujian.gov.cn/jggk/csxx/wsyjbgs/wsyj/201810/t20181018_4684824.htm",
+      "license_note": "福建省卫生健康委员会正式发布的国家卫生健康委员会心理健康素养材料，仅用于非商业学习与研究并注明原始 URL。",
+      "required_phrases": [
+        "出现心理问题积极求助，是负责任、有智慧的表现",
+        "服用精神类药物需遵医嘱，不滥用，不自行减停",
+        "用科学的方法缓解压力，不逃避，不消极"
+      ],
+      "landing_url": null,
+      "authority_tier": "B",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "beijing_health_depression_public_education_2026",
+      "title": "正视抑郁症，拥抱内心的阳光",
+      "publisher": "北京市卫生健康委员会发布，北京小汤山医院供稿",
+      "topic": "抑郁症识别 规范就医 家属支持 危险信号",
+      "source_type": "html",
+      "extractor": "gov_trs",
+      "url": "https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jksh/202608/t20260813_4821739.html",
+      "license_note": "北京市卫生健康委员会正式发布的医疗机构科普材料，仅用于非商业学习与研究并注明发布机构、供稿机构和原始 URL。",
+      "required_phrases": [
+        "单纯的心情不好不等于抑郁症",
+        "禁止私自停药、减药",
+        "若出现自伤、轻生念头，立刻寻求紧急医疗帮助"
+      ],
+      "landing_url": null,
+      "authority_tier": "B",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "nhc_healthy_older_adult_standard_wst802_2022",
+      "title": "中国健康老年人标准（WS/T 802—2022）",
+      "publisher": "中华人民共和国国家卫生健康委员会",
+      "topic": "老年人综合健康评估 焦虑 抑郁 社会适应 社会支持 量表说明",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.nhc.gov.cn/cms-search/downFiles/49110d1bed934b6da0dbb3eb44f95395.pdf",
+      "license_note": "国家卫生健康委员会正式发布的卫生行业标准，仅用于非商业学习与研究并注明标准编号、发布机构和原始 URL；其中量表用于标准限定的老年人综合健康评估语境，不作为独立临床诊断依据。",
+      "required_phrases": [
+        "中国健康老年人标准",
+        "中国健康老年人评估表",
+        "Lubben 社会网络量表"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "professional",
+      "content_layer": "professional_reference",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_older_adult_caregiver_stress",
+      "title": "压力处理：认识家中护老者的精神压力",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者与照护者压力 压力反应 情绪调适 求助",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/sc_chi/healthy_ageing/mental_health/caregiverstress.html",
+      "license_note": "香港特别行政区政府卫生署长者健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "压力是都市人生活的一部分",
+        "长期处于过大压力的影响",
+        "如果你长期处于过大的精神压力，并感到未能应付，请立即求诊"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_postnatal_stress_coping",
+      "title": "产后妈妈如何应对压力",
+      "publisher": "香港特别行政区政府卫生署家庭健康服务",
+      "topic": "产后心理健康 压力应对 家庭支持 专业求助",
+      "source_type": "html",
+      "extractor": "fhs_article",
+      "url": "https://www.fhs.gov.hk/sc_chi/health_info/woman/30139.html",
+      "license_note": "香港特别行政区政府卫生署家庭健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "产后妈妈需要面对不同的压力",
+        "情绪明显受困扰的警号",
+        "你亦可约见精神科医生或临床心理学家作评估"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_student_stress_management",
+      "title": "学生心理社交健康：如何处理压力",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生心理健康 压力表现 认知调节 社会支持 健康生活",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/health/health_ph/health_ph_stress.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "压力过高或长期受压时，则会损害我们的身心健康",
+        "处理压力的有效方法",
+        "建立健康的生活习惯"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_perinatal_emotional_health",
+      "title": "产前产后的情绪健康",
+      "publisher": "香港特别行政区政府卫生署家庭健康服务",
+      "topic": "孕产期心理健康 产后情绪低落 产后抑郁 产后精神病 危机识别 香港地区求助服务",
+      "source_type": "html",
+      "extractor": "fhs_article",
+      "url": "https://www.fhs.gov.hk/sc_chi/health_info/woman/30098.html",
+      "license_note": "香港特别行政区政府卫生署家庭健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL；文中热线及服务仅适用于香港地区，回答其他地区用户时不得直接套用。",
+      "required_phrases": [
+        "产后情绪问题的类别",
+        "属精神科的急症，必须立刻转介精神科医生或到医院急症室求诊",
+        "如以上的情况持续多于两星期，并明显影响妇女的日常生活，便应及早寻求协助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_parent_guidance_adolescent_emotion_regulation",
+      "title": "如何教导青少年调节情绪",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "青少年情绪调节 家长沟通 情绪觉察 应对策略",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/parent_zone/txt_regulate_emotions.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "接纳他们的情绪，而不是要求他们抑压感受",
+        "提高对情绪的觉察力",
+        "计划应对策略"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_student_anxiety_guidance",
+      "title": "学生焦虑情绪相关状况",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生焦虑 正常焦虑 认知偏差 日常应对 专业求助",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_anxiety_issue.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL；日常建议不能替代专业评估或治疗。",
+      "required_phrases": [
+        "影響到日常生活，我們便需要考慮尋求專業協助",
+        "憂慮時段",
+        "分享想法和感受"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_student_sleep_guidance",
+      "title": "学生睡眠相关状况",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生睡眠 睡眠卫生 作息 环境 咖啡因",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_sleep_issue.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "睡眠是一個對於身心健康十分重要的狀態",
+        "建立有規律的睡眠習慣",
+        "製造一個寧靜、舒服和幽暗的睡眠環境"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "hk_dh_student_self_image_guidance",
+      "title": "学生自我形象相关状况",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生自我形象 自我接纳 合理目标 社会支持",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_self-esteem_issue.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "自我形象即個人對自己的評價",
+        "避免與別人比較",
+        "建立良好的人際關係"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "hk_dh_student_attention_guidance",
+      "title": "学生专注力相关状况",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生专注力 目标拆分 环境管理 作息 社会支持",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_attention_issue.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容为一般专注力建议，不用于诊断注意缺陷多动障碍。",
+      "required_phrases": [
+        "較難維持專注力",
+        "把目標分成較細小及更容易管理的部分",
+        "有規律的日常生活及充足睡眠"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "hk_dh_student_impulse_control_guidance",
+      "title": "学生控制冲动相关状况",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生冲动控制 冷静技巧 后果思考 社交技巧",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_impulse_control_issue.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容为一般自我管理建议，不用于疾病诊断。",
+      "required_phrases": [
+        "不傷害自己、不傷害別人、不破壞物件",
+        "行動前，要先冷靜，細心觀察，構思行動",
+        "學習社交技巧有助你與人相處"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_student_academic_performance_guidance",
+      "title": "学生学业表现相关状况",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生学业压力 合理期望 时间管理 学习习惯 社会支持",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/txt_academic_performance_issue.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "認識和接納自己的能力、特長、興趣和限制",
+        "妥善分配和控制時間",
+        "多與家人和師長好友分享想法和感受"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "standard"
+    },
+    {
+      "source_id": "hk_ha_cognitive_behavioural_therapy",
+      "title": "认知行为治疗",
+      "publisher": "香港医院管理局青山医院精神健康学院",
+      "topic": "心理治疗 认知行为治疗 CBT 治疗过程 专业人员",
+      "source_type": "html",
+      "extractor": "ha_mental_health",
+      "url": "https://www3.ha.org.hk/cph/imh/sc/mental-health-info/4/3/1/cognitive-behavioural-therapy",
+      "license_note": "香港医院管理局青山医院精神健康学院教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；心理治疗应由具备相应训练和经验的专业人员实施。",
+      "required_phrases": [
+        "是一种针对改变思想与行为的心理治疗",
+        "治疗师会与你一起订立目标及治疗计划",
+        "由有相关专业训练及经验的临床心理学家提供"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_bereavement_grief_guidance",
+      "title": "丧亲：面对失落与哀伤",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "丧亲 哀伤反应 情绪支持 生活适应 危险信号 香港地区求助服务",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/sc_chi/healthy_ageing/mental_health/bereavement.html",
+      "license_note": "香港特别行政区政府卫生署长者健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL；文中热线及服务仅适用于香港地区，回答其他地区用户时不得直接套用。",
+      "required_phrases": [
+        "哀伤是至亲离世後的正常反应",
+        "当哀伤变得不能承受",
+        "就必须立即寻求医生或专业人士的协助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_edb_parent_support_child_ocd",
+      "title": "如何帮助有强迫症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童青少年强迫症 强迫思想 强迫行为 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T13_OCD_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容用于识别和支持，不作为自行诊断或自行调整治疗的依据，热线及服务仅适用于香港地区。",
+      "required_phrases": [
+        "如何帮助有强迫症的子女",
+        "尽早带子女求诊及接受评估",
+        "学校、家长及专业人员"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_edb_parent_support_child_eating_disorder",
+      "title": "如何帮助有饮食失调症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童青少年进食障碍 厌食症 暴食症 身体形象 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T14_ED_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容用于识别和支持，不作为自行诊断、节食或治疗的依据，热线及服务仅适用于香港地区。",
+      "required_phrases": [
+        "如何帮助有饮食失调症的子女",
+        "尽早带子女求诊及接受评估",
+        "营造一个对外貌欺凌零容忍的健康校园环境"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_edb_parent_support_selective_mutism",
+      "title": "如何帮助有选择性缄默症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童选择性缄默症 焦虑 社交沟通 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T11_SM_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容用于识别和支持，不作为自行诊断依据。",
+      "required_phrases": [
+        "如何帮助有选择性缄默症的子女",
+        "家长角色",
+        "加强支援及家校合作"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_edb_parent_support_tourette_syndrome",
+      "title": "如何帮助有妥瑞症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童妥瑞症 抽动 情绪支持 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T12_TS_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；妥瑞症属于神经发育障碍，本资料仅用于相关心理与社会支持，不作为自行诊断依据。",
+      "required_phrases": [
+        "如何帮助有妥瑞症的子女",
+        "家长角色",
+        "加强支援及家校合作"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_edb_parent_support_oppositional_defiant_disorder",
+      "title": "如何帮助有对立性反抗症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童对立性反抗症 情绪行为 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T15_ODD_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容用于识别和支持，不可把一般叛逆行为自行诊断为疾病。",
+      "required_phrases": [
+        "如何帮助有对立性反抗症的子女",
+        "家长角色",
+        "加强支援及家校合作"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_edb_parent_support_child_anxiety_disorder",
+      "title": "如何帮助有焦虑症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童青少年焦虑症 正常焦虑 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T16_AD_Chinese-S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容用于识别和支持，不作为自行诊断依据。",
+      "required_phrases": [
+        "如何帮助有焦虑症的子女",
+        "家长角色",
+        "加强支援及家校合作"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_edb_parent_support_child_psychosis",
+      "title": "如何帮助有思觉失调的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童青少年思觉失调 精神病性症状 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T17_PS_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；出现疑似精神病性症状应由专业人员评估，不作为自行诊断或调整治疗的依据。",
+      "required_phrases": [
+        "如何帮助有思觉失调的子女",
+        "家长角色",
+        "加强支援及家校合作"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_edb_parent_support_child_depression",
+      "title": "如何帮助有抑郁症的子女",
+      "publisher": "香港特别行政区政府教育局",
+      "topic": "儿童青少年抑郁症 情绪行为变化 家长支持 学校支持 专业评估",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://sense.edb.gov.hk/uploads/content/parent%20resource/chi%26eng/MI_Chinese/T10_DD_Chinese_S.pdf",
+      "license_note": "香港特别行政区政府教育局家长教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；内容用于识别和支持，不作为自行诊断、用药或调整治疗的依据。",
+      "required_phrases": [
+        "如何帮助有抑郁症的子女",
+        "家长角色",
+        "加强支援及家校合作"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_psychotherapy_faq",
+      "title": "关于心理治疗的常见疑问",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "心理治疗 专业训练 治疗目标 治疗关系 治疗过程",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/psychotherapy/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL；心理治疗应由具备相应专业训练的人员提供。",
+      "required_phrases": [
+        "心理治療是建基於心理學理論、以實證為本的治療方法",
+        "心理治療是有時限、有目標的面談",
+        "坦誠告訴治療師"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_psychiatric_medication_faq",
+      "title": "关于精神科药物治疗的常见疑问",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "精神科药物 遵医嘱 副作用 停药风险 家属支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/basic-understanding-of-psychiatric-medications/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL；不得据此自行选药、改变剂量或停药，具体用药须由医生评估。",
+      "required_phrases": [
+        "嚴格遵從醫生的指示",
+        "擅自停止服用",
+        "如果患者仍拒絕服用藥物，請向醫療人員求助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_traumatic_events_news_mental_health",
+      "title": "从创伤事件和新闻中守护精神健康",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "创伤事件 负面新闻 压力反应 媒体暴露 自我照护 社会支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/protect-mental-health-against-traumatic-events-and-news/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "不斷重複接觸此類負面資訊可能導致以下重大負面影響",
+        "限制接觸負面新聞的時間",
+        "在有需要時尋求支援至關重要"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_anxiety_disorders_public_education",
+      "title": "焦虑症：识别、治疗与照顾者支持",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "焦虑症 恐慌 社交恐惧 广泛性焦虑 症状 治疗 照顾者支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/anxiety-disorders/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "焦慮症是一系列以過度焦慮或恐懼為主要表徵的情緒疾患",
+        "要判斷焦慮感是否構成病態",
+        "讓患者多了解自己的病情"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_depression_public_education",
+      "title": "抑郁症：识别、治疗与照顾者支持",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "抑郁症 情绪低落 兴趣减退 风险信号 治疗 照顾者支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/depression/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "抑鬱症是一種常見的情緒病",
+        "持續超過兩星期",
+        "應盡快向專業人士求助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_mixed_anxiety_depression_public_education",
+      "title": "混合焦虑抑郁症科普",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "混合焦虑抑郁 情绪困扰 症状 心理治疗 药物治疗 社会支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/mixed-anxiety-and-depressive-disorder/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "焦慮與抑鬱是兩種不同類別的情緒困擾",
+        "請盡早尋求專業人士的協助",
+        "主要有心理治療和藥物治療"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_bipolar_disorder_public_education",
+      "title": "躁狂抑郁症（双相情感障碍）科普",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "双相情感障碍 躁狂 抑郁 风险信号 治疗 复发预防 家庭支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/bipolar-disorder/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "學名「雙相情感障礙」",
+        "應盡早尋求專業人士的協助",
+        "請盡快諮詢你的醫生"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_psychosis_public_education",
+      "title": "思觉失调：早期识别、治疗与家庭支持",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "思觉失调 妄想 幻觉 早期识别 治疗 家庭支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/psychosis/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "思覺失調是指一種異常的精神狀態",
+        "及早察覺和適切的治療",
+        "應盡快尋求醫生協助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_cyberbullying_adolescent_suicide_prevention",
+      "title": "网络欺凌与预防青少年自杀",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "网络欺凌 青少年心理健康 自伤自杀风险 警号 家长学校支持 紧急求助",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.shallwetalk.hk/app/public/files/Cyberbullying_and_Prevention_of_Adolescent_Suicide_TC.pdf",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL；热线信息仅适用于香港地区且使用前须核验时效。",
+      "required_phrases": [
+        "何謂網絡欺凌",
+        "常見網絡欺凌的警號",
+        "主動告訴親友或信任的成年人"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_elderly_coping_with_anxiety",
+      "title": "长者如何处理焦虑",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者焦虑 正常焦虑 焦虑症 身心症状 自助方法 专业求助",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/health_information/mental_illness/coping_with_anxiety.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；热线仅适用于香港地区。",
+      "required_phrases": [
+        "焦慮是人類在面對危機時的自然情緒反應",
+        "若焦慮情緒長期持續而又處理不當",
+        "宜盡早求醫"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_elderly_dementia_overview",
+      "title": "认知障碍症科普",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "认知障碍症 记忆 早期识别 治疗 照顾者支持",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/health_information/dementia/dementia.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "認知障礙症是因大腦神經細胞病變",
+        "病情發展和徵狀",
+        "認知障礙症家屬支援小組"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_elderly_sleep_and_mental_health_2025",
+      "title": "睡眠与精神健康（长者）",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者睡眠 失眠 焦虑 抑郁 睡眠卫生 专业求助",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.elderly.gov.hk/tc_chi/education_and_media_resources/files/%E7%9D%A1%E7%9C%A0%E8%88%87%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%20%282025%E5%B9%B410%E6%9C%88%29.pdf",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "睡眠與精神健康",
+        "睡眠質素較差的長者",
+        "提升睡眠質素"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_fhs_postnatal_emotional_health",
+      "title": "产后的情绪健康",
+      "publisher": "香港特别行政区政府卫生署家庭健康服务",
+      "topic": "产后情绪低落 产后抑郁 产后精神病 风险因素 家庭支持 专业求助",
+      "source_type": "html",
+      "extractor": "fhs_article",
+      "url": "https://www.fhs.gov.hk/tc_chi/health_info/woman/14750.html",
+      "license_note": "香港特别行政区政府卫生署家庭健康服务资料，仅用于非商业学习与研究并注明发布机构和原始 URL；热线仅适用于香港地区。",
+      "required_phrases": [
+        "產後的情緒健康很重要",
+        "產後情緒問題大致可分為以下三類",
+        "尋求協助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_fhs_postnatal_woman_needs",
+      "title": "产后母亲的需要与家庭支持",
+      "publisher": "香港特别行政区政府卫生署家庭健康服务",
+      "topic": "产后母亲 休息 心理支持 家庭支持 情绪观察 专业求助",
+      "source_type": "html",
+      "extractor": "fhs_article",
+      "url": "https://www.fhs.gov.hk/tc_chi/health_info/woman/30013.html",
+      "license_note": "香港特别行政区政府卫生署家庭健康服务资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "產後母親的需要",
+        "亦需要家人給予心理上的支持",
+        "應盡快向醫護人員尋求協助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_grief_management_public_education",
+      "title": "挚爱离世后的哀伤处理",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "丧亲 哀伤反应 情绪接纳 生活适应 社会支持 专业求助",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/grief-management/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL；热线仅适用于香港地区。",
+      "required_phrases": [
+        "哀傷反應也會因人而異",
+        "好好抒發內心感受",
+        "應盡早向專業人士求助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_elderly_depression_recognition_support",
+      "title": "认识长者抑郁症",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者抑郁 症状 两周标准 治疗 生活调整 亲友支持 危机信号",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/health_information/mental_illness/depression.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "抑鬱症是一種常見的情緒病",
+        "持續兩星期或以上",
+        "切勿忽視長者有關自殺的話語"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_elderly_social_isolation_prevention",
+      "title": "长者不再孤立：识别与支持",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者孤立 孤独 社交支持 情绪健康 社区联系 亲友支持",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/healthy_living/socialisolation.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "長期的孤立不單影響社交生活",
+        "如何預防及處理孤立",
+        "如何幫助長者不再孤立"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_elderly_chronic_illness_stress",
+      "title": "如何处理长期患病的压力",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "慢性病心理压力 长者 照顾者耗竭 情绪低落 自杀风险 压力应对",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/mental_health/coping_with_chronic_illness.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "本港七成以上的長者",
+        "容易產生「心力交瘁」的耗盡狀態",
+        "長期抑鬱及自殺"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_elderly_abuse_prevention",
+      "title": "预防长者受虐",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者虐待 精神虐待 身体虐待 疏忽 风险信号 求助支持",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/healthy_living/prevention_of_elder_abuse.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；地区服务信息使用前须核验。",
+      "required_phrases": [
+        "預防長者受虐",
+        "危害或損害長者心理健康",
+        "尋求協助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_elderly_addictive_behaviour",
+      "title": "长者与沉溺行为",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "沉溺行为 赌博 酒精 药物 心理依赖 家庭支持 专业求助",
+      "source_type": "html",
+      "extractor": "elderly_health",
+      "url": "https://www.elderly.gov.hk/tc_chi/healthy_ageing/mental_health/behaviour.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "沉溺行為",
+        "藉著沉溺行為來解除苦悶",
+        "應立即尋找專業服務"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_elderly_mental_health_handbook",
+      "title": "活出安康乐耆年：长者精神健康手册",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "长者精神健康 抑郁 焦虑 认知障碍 照顾者 自杀危机 综合手册",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.elderly.gov.hk/tc_chi/education_and_media_resources/files/mental_health/mental_health_W3C%20version.pdf",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL；地区热线信息使用前须核验。",
+      "required_phrases": [
+        "活出安康樂耆年",
+        "長者精神健康",
+        "如何處理自殺危機"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "professional_reference",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_autism_spectrum_disorder_public_education",
+      "title": "自闭症谱系障碍科普与家庭支持",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "自闭症谱系障碍 神经发展 社交沟通 行为训练 家庭教育支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/autism-spectrum-disorder/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "是一種與生俱來的神經發展障礙",
+        "父母管教不善嗎",
+        "必須針對兒童的個別需要"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_adhd_public_education",
+      "title": "专注力不足／过度活跃症科普",
+      "publisher": "香港特别行政区政府卫生署精神健康推广计划“陪我讲”",
+      "topic": "ADHD 注意力不足 过度活跃 冲动 专业评估 行为治疗 家长支持",
+      "source_type": "html",
+      "extractor": "shall_we_talk",
+      "url": "https://www.shallwetalk.hk/zh/mental-health-information/attention-deficit-hyperactivity-disorder/",
+      "license_note": "香港特别行政区政府卫生署精神健康推广资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "是一種常見的兒童神經行為發展障礙",
+        "出現徵狀未必等同患上ADHD",
+        "必須經專業人員評估"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "mixed",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_student_cyberbullying_parent_support",
+      "title": "发现子女受到网络欺凌时如何协助",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "网络欺凌 青少年 情绪困扰 家长支持 保存证据 学校社工求助",
+      "source_type": "html",
+      "extractor": "student_health",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/internet/media/txt_stand_against_cyber_bullying_post_c.html",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL；地区执法及服务信息使用前须核验。",
+      "required_phrases": [
+        "网络欺凌会为受害人带来情绪困扰",
+        "鼓励及接纳孩子表达情绪",
+        "陪同孩子向学校或社工寻求协助"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "sensitive"
+    },
+    {
+      "source_id": "hk_dh_student_anger_selfcare",
+      "title": "学生认识和处理愤怒情绪",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生愤怒 情绪识别 暂时离场 认知调节 放松 沟通 求助",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_anger_selfcare_tips_zh-cn.pdf",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "憤怒也是",
+        "暫時離場",
+        "改善溝通"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_parent_child_anger_support",
+      "title": "家长理解和处理子女愤怒情绪",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "子女愤怒 家长支持 情绪降温 同理倾听 沟通 解难",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_anger_parenting_tips_zh-cn.pdf",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "毋須要求",
+        "家長先要冷靜",
+        "聆聽子女的傾訴"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_student_insomnia_selfcare_2026",
+      "title": "学生了解及改善失眠问题",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "学生失眠 睡眠规律 放松 电子屏幕 咖啡因 睡眠环境",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_understanding_and_dealing_with_insomnia_selfcare_tips_zh-cn.pdf",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "會導致失眠",
+        "每日定時睡覺",
+        "睡前一小時避免使用電子屏幕產品"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "public",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_parent_child_insomnia_support_2026",
+      "title": "家长帮助子女改善失眠问题",
+      "publisher": "香港特别行政区政府卫生署学生健康服务",
+      "topic": "子女失眠 家长支持 作息 放松 电子屏幕 咖啡因 睡眠环境",
+      "source_type": "pdf",
+      "extractor": "pdf_text",
+      "url": "https://www.studenthealth.gov.hk/sc_chi/emotional_health_tips/files/infographic_understanding_and_dealing_with_insomnia_parenting_tips_zh-cn.pdf",
+      "license_note": "香港特别行政区政府卫生署学生健康服务科普资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "要維持睡眠規律",
+        "讓身心放鬆的簡單活動",
+        "家長應以身作則"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_elderly_caregiver_stress_signs",
+      "title": "护老者精神压力的来源与征兆",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "护老者 压力来源 身体征兆 情绪征兆 人际冲突 自我觉察",
+      "source_type": "html",
+      "extractor": "elderly_newsletter",
+      "url": "https://www.elderly.gov.hk/tc_chi/newsletter/vol13/p2.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "護老者如何處理精神壓力",
+        "精神壓力的常見徵兆",
+        "找出精神壓力的來源"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    },
+    {
+      "source_id": "hk_dh_elderly_caregiver_stress_coping",
+      "title": "护老者处理精神压力的方法",
+      "publisher": "香港特别行政区政府卫生署长者健康服务",
+      "topic": "护老者 压力应对 自我关怀 支持网络 放松训练 专业求助",
+      "source_type": "html",
+      "extractor": "elderly_newsletter",
+      "url": "https://www.elderly.gov.hk/tc_chi/newsletter/vol13/p3.html",
+      "license_note": "香港特别行政区政府卫生署长者健康教育资料，仅用于非商业学习与研究并注明发布机构和原始 URL。",
+      "required_phrases": [
+        "處理精神壓力",
+        "愛惜自己，保重身體",
+        "量力而為，善用支援"
+      ],
+      "landing_url": null,
+      "authority_tier": "A",
+      "audience": "caregiver",
+      "content_layer": "public_education",
+      "risk_level": "high"
+    }
+  ]
+}

@@ -221,6 +221,24 @@ def test_extracts_only_first_matching_article_root() -> None:
     assert "重复的移动版正文" not in text
 
 
+def test_extracts_trs_ueditor_government_article() -> None:
+    raw_html = """
+    <div class="navigation">导航噪声</div>
+    <div class="view TRS_UEDITOR trs_paper_default">
+      <p>单纯的心情不好不等于抑郁症。</p>
+      <p>出现危险信号时应及时寻求专业帮助。</p>
+    </div>
+    <div class="footer">页脚噪声</div>
+    """.encode()
+
+    text = corpus.extract_html_text(raw_html, "gov_trs", "抑郁症科普")
+
+    assert "单纯的心情不好不等于抑郁症" in text
+    assert "及时寻求专业帮助" in text
+    assert "导航噪声" not in text
+    assert "页脚噪声" not in text
+
+
 def test_extracts_who_question_and_answer_layout() -> None:
     raw_html = """
     <html><body><div id="sf-accordion">
@@ -238,6 +256,106 @@ def test_extracts_who_question_and_answer_layout() -> None:
 def test_html_extraction_fails_when_article_root_is_missing() -> None:
     with pytest.raises(ValueError, match="article root was not found"):
         corpus.extract_html_text(b"<html><body>no article</body></html>", "who_article", "标题")
+
+
+def test_extracts_elderly_health_article_body_only() -> None:
+    raw_html = b"""
+    <html><body>
+      <nav>Navigation noise</nav>
+      <div class="main-block-content blog-block-content mb-5">
+        <h2>How to cope</h2>
+        <p>Anxiety can affect daily life.</p>
+        <script>ignored()</script>
+      </div>
+      <footer>Footer noise</footer>
+    </body></html>
+    """
+
+    text = corpus.extract_html_text(raw_html, "elderly_health", "Anxiety")
+
+    assert "How to cope" in text
+    assert "Anxiety can affect daily life." in text
+    assert "Navigation noise" not in text
+    assert "Footer noise" not in text
+    assert "ignored" not in text
+
+
+@pytest.mark.parametrize(
+    ("extractor", "root"),
+    [
+        ("fhs_article", '<div id="content">'),
+        ("student_health", '<section class="content">'),
+    ],
+)
+def test_extracts_hong_kong_health_article_layouts(
+    extractor: str, root: str
+) -> None:
+    closing_tag = "div" if root.startswith("<div") else "section"
+    raw_html = (
+        f"<html><body><nav>Navigation noise</nav>{root}"
+        "<h2>Managing stress</h2><p>Seek professional help when needed.</p>"
+        f"</{closing_tag}><footer>Footer noise</footer></body></html>"
+    ).encode()
+
+    text = corpus.extract_html_text(raw_html, extractor, "Stress")
+
+    assert "Managing stress" in text
+    assert "Seek professional help when needed." in text
+    assert "Navigation noise" not in text
+    assert "Footer noise" not in text
+
+
+def test_extracts_hospital_authority_mental_health_article() -> None:
+    raw_html = b"""
+    <html><body><nav>Navigation noise</nav>
+      <div id="mentalHealthContent">
+        <h2>Condition overview</h2><p>Professional assessment is required.</p>
+      </div>
+      <footer>Footer noise</footer>
+    </body></html>
+    """
+
+    text = corpus.extract_html_text(raw_html, "ha_mental_health", "Condition")
+
+    assert "Condition overview" in text
+    assert "Professional assessment is required." in text
+    assert "Navigation noise" not in text
+    assert "Footer noise" not in text
+
+
+def test_extracts_shall_we_talk_article() -> None:
+    raw_html = b"""
+    <html><body><nav>Navigation noise</nav>
+      <section id="article" class="style-1"><nav>Section menu noise</nav>
+        <h1>Mental health topic</h1><p>Seek qualified support when needed.</p>
+      </section>
+      <footer>Footer noise</footer>
+    </body></html>
+    """
+
+    text = corpus.extract_html_text(raw_html, "shall_we_talk", "Topic")
+
+    assert "Mental health topic" in text
+    assert "Seek qualified support when needed." in text
+    assert "Navigation noise" not in text
+    assert "Section menu noise" not in text
+    assert "Footer noise" not in text
+
+
+def test_extracts_elderly_newsletter_main_content() -> None:
+    raw_html = b"""
+    <html><body><nav>Navigation noise</nav>
+      <div id="mainContent"><h1>Caregiver stress</h1><p>Seek support.</p></div>
+      <footer>Footer noise</footer>
+    </body></html>
+    """
+
+    text = corpus.extract_html_text(raw_html, "elderly_newsletter", "Article")
+
+    assert "Caregiver stress" in text
+    assert "Seek support." in text
+    assert "Navigation noise" not in text
+    assert "Footer noise" not in text
 
 
 def test_semantic_verification_rejects_missing_or_reordered_phrases() -> None:

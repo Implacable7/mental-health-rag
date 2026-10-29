@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import re
+import ssl
 import time
 import urllib.error
 import urllib.request
@@ -18,6 +19,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+import certifi
 from langchain_core.documents import Document
 from pypdf import PdfReader
 
@@ -25,11 +27,20 @@ from mental_health_rag.cleaning import clean_document
 from mental_health_rag.deduplication import deduplicate_documents
 
 _ALLOWED_HOSTS = {
+    "iris.who.int",
     "www.who.int",
     "www.nhc.gov.cn",
     "www.gov.cn",
     "app.www.gov.cn",
     "www.zlq.gov.cn",
+    "wjw.fujian.gov.cn",
+    "wjw.beijing.gov.cn",
+    "www.elderly.gov.hk",
+    "www.fhs.gov.hk",
+    "www.studenthealth.gov.hk",
+    "www3.ha.org.hk",
+    "sense.edb.gov.hk",
+    "www.shallwetalk.hk",
 }
 _SOURCE_TYPES = {"html", "pdf"}
 _AUTHORITY_TIERS = {"A", "B", "C", "legacy_reviewed"}
@@ -42,10 +53,16 @@ _EXTRACTORS = {
     "gov_article",
     "gov_trs",
     "gov_doc_content",
+    "elderly_health",
+    "elderly_newsletter",
+    "fhs_article",
+    "student_health",
+    "ha_mental_health",
+    "shall_we_talk",
     "pdf_text",
 }
 _BLOCK_TAGS = {"br", "div", "h1", "h2", "h3", "h4", "li", "p", "section"}
-_IGNORED_TAGS = {"script", "style", "noscript", "svg"}
+_IGNORED_TAGS = {"script", "style", "noscript", "svg", "nav"}
 _VOID_TAGS = {
     "area",
     "base",
@@ -64,6 +81,7 @@ _VOID_TAGS = {
 _CJK_CHARACTER = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 _MULTIPLE_SPACES = re.compile(r"[ \t\u00a0\u3000]+")
 _MULTIPLE_NEWLINES = re.compile(r"\n{3,}")
+_TLS_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
 
 @dataclass(frozen=True, slots=True)
@@ -187,10 +205,27 @@ class _ArticleTextParser(HTMLParser):
             return tag == "article" and attrs.get("id") == "articleins"
         if self.extractor == "gov_trs":
             return tag == "div" and (
-                "TRS_Editor" in classes or "pages_content" in classes
+                "TRS_Editor" in classes
+                or "TRS_UEDITOR" in classes
+                or "pages_content" in classes
             )
         if self.extractor == "gov_doc_content":
             return tag == "div" and attrs.get("id") == "docContent"
+        if self.extractor == "elderly_health":
+            return tag == "div" and {
+                "main-block-content",
+                "blog-block-content",
+            }.issubset(classes)
+        if self.extractor == "elderly_newsletter":
+            return tag == "div" and attrs.get("id") == "mainContent"
+        if self.extractor == "fhs_article":
+            return tag == "div" and attrs.get("id") == "content"
+        if self.extractor == "student_health":
+            return tag == "section" and "content" in classes
+        if self.extractor == "ha_mental_health":
+            return tag == "div" and attrs.get("id") == "mentalHealthContent"
+        if self.extractor == "shall_we_talk":
+            return tag == "section" and attrs.get("id") == "article"
         return False
 
 
@@ -268,6 +303,12 @@ def extract_html_text(raw_html: bytes, extractor: str, title: str) -> str:
         "gov_article",
         "gov_trs",
         "gov_doc_content",
+        "elderly_health",
+        "elderly_newsletter",
+        "fhs_article",
+        "student_health",
+        "ha_mental_health",
+        "shall_we_talk",
     }:
         raise ValueError(f"unsupported HTML extractor: {extractor}")
     parser = _ArticleTextParser(extractor)
@@ -306,7 +347,7 @@ def prepare_corpus(
     report_path: str | Path,
     *,
     timeout_seconds: int = 30,
-    max_bytes: int = 20_000_000,
+    max_bytes: int = 25_000_000,
     min_characters: int = 500,
     refresh: bool = False,
     continue_on_error: bool = False,
@@ -563,7 +604,11 @@ def _download(url: str, timeout_seconds: int, max_bytes: int) -> bytes:
     content: bytes | None = None
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+            with urllib.request.urlopen(
+                request,
+                timeout=timeout_seconds,
+                context=_TLS_CONTEXT,
+            ) as response:
                 content = response.read(max_bytes + 1)
             break
         except urllib.error.HTTPError as error:

@@ -4,6 +4,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .docx_qa_*/
+.docx_qa/
 
 # Local environments and secrets
 .venv/
